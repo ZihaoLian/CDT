@@ -1,0 +1,5 @@
+<!--Components/customButton/customButton.wxml-->
+<view class="btn-container" catchtap="_click">
+  <view></view>
+
+</view>

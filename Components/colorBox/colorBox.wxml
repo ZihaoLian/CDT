@@ -1,0 +1,5 @@
+<!--Components/colorBox.wxml-->
+<view class="color-box-container">
+  <view class="{{selected?'color-box-selected': 'collor-box'}}" style="background:{{color}} catchtap='_select'"></view>
+  <slot />
+</view>

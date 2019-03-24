@@ -1,0 +1,10 @@
+<!--Components/brushpoint/brushpoint.wxml-->
+<!--  <slot></slot>留出和正常插件一样可以放置的位置 -->
+<view catchtap='_select'  class="brush-point-container">
+  <view class="click-effect" hidden="{{hiddenEffect}}"></view>
+  <slot></slot>
+  <view class="brush-point-font" style="background:{{color}}; width:{{innerRadius}}rpx; height:{{innerRadius}}rpx;  border-radius:{{innerRadius}}rpx; "></view>
+  <view class="brush-point-bg" hidden="{{selected}}" style="background:{{bgColor}}; width:{{outterRadius}}rpx; height:{{outterRadius}}rpx; boder-radius: {{outterRadius}}rpx"></view>
+</view>
+
+
