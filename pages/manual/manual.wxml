@@ -1,0 +1,11 @@
+<!--pages/manual/manual.wxml-->
+
+<swiper class="swiper" indicatorDots="true" current="{{index}}" autoplay="false" duration="500" bindchange='bindChange'>
+  <block wx:for="{{manualImg}}" wx:for-index="index">
+    <swiper-item>
+        <image src="{{item.url}}" class="swiperImage" mode="scaleToFill" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
