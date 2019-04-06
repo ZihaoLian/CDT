@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/test/test",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/manual/manual",
+    "pages/personCenter/personCenter"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "AD画钟测试",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_selected.png"
+      },
+      {
+      "text": "测试",
+      "pagePath": "pages/test/test",
+      "iconPath": "icon/clock_test.png",
+      "selectedIconPath": "icon/clock_test_selected.png"
+    },
+    {
+      "text": "我的",
+      "pagePath": "pages/personCenter/personCenter",
+      "iconPath": "icon/personinfo.png",
+      "selectedIconPath": "icon/personinfo_selected.png"
+    }]
+  }
+}

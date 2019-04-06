@@ -1,6 +1,13 @@
 //app.js
 App({
   onLaunch: function () {
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        this.globalData.CustomBar = e.statusBarHeight + 46;
+        this.globalData.ContentHeight = e.screenHeight - this.globalData.CustomBar - 90;
+      }
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

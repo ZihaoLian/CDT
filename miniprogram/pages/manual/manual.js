@@ -34,7 +34,7 @@ Page({
           if (res.confirm) {
             console.log('用户点击确定')
             wx.redirectTo({
-              url: '../logs/logs'
+              url: '../test/test'
             });
           } else if (res.cancel) {
             console.log('用户点击取消')

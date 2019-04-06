@@ -1,0 +1,32 @@
+<!--pages/test/test.wxml-->
+<view class='navigatorColor' style="height:{{CustomBar}}px;">
+    <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+        <view class='navigator_text' style='top:{{StatusBar}}px;height:{{CustomBar-StatusBar}}px;'>
+            测试
+        </view>
+    </view>
+</view>
+
+<view>
+  <view class="user">
+    <view class="useinfo">
+      <open-data type="userAvatarUrl" class="userinfo-avatar"   mode="cover"></open-data>
+      <label>正在测试的是：</label>
+      <open-data type="userNickName" lang="zh_CN" class="nickname"></open-data>
+      <image src="../../icon/tip.jpg" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
+    </view>
+  </view>
+
+  <view class="canvasType">
+    <canvas class="firstCanvas" style="width: 100%; height: 700rpx;" canvas-id="firstcanvas" bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true"></canvas>
+  </view>
+
+  <view class="flex-wrp" style="flex-direction:row">
+    <button class="Button_type" bindtap='start_draw'>开始</button>
+    <button class="Button_type" bindtap='cancel_draw'>取消</button>
+    <button class="Button_type" bindtap='next_step'>下一步</button>
+  </view>
+  
+</view>
+
+

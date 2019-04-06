@@ -1,0 +1,11 @@
+/* pages/personCenter/personCenter.wxss */
+.navigatorColor {
+  text-align: center;
+  font-size: 45rpx;
+  background: linear-gradient(to right, #fcbb1e, #fcef1e );
+}
+
+.navigator_text{
+  margin-top: 20rpx;
+  
+}

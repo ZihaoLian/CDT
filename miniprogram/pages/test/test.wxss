@@ -1,0 +1,48 @@
+/* pages/test/test.wxss */
+.navigatorColor {
+  text-align: center;
+  font-size: 45rpx;
+  background: linear-gradient(to right, #fcbb1e, #fcef1e );
+}
+
+.navigator_text{
+  margin-top: 20rpx;
+  
+}
+
+  .useinfo{
+    display: flex;
+    overflow: hidden;
+    height: 120rpx;
+  }
+
+  .userinfo-avatar{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-left: 20rpx;
+    margin-top: 10rpx;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .canvasType{
+    border-bottom: 1px solid #f0efef
+  }
+
+  .user{
+    border-bottom: 1px solid #f0efef
+  }
+
+  .flex-wrp {
+  display: flex;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.Button_type{
+  line-height: 80rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+}
