@@ -18,13 +18,14 @@
   </view>
 
   <view class="canvasType">
-    <canvas class="firstCanvas" style="width: 100%; height: 700rpx;" canvas-id="firstcanvas" bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true"></canvas>
+    <canvas class="firstCanvas" style="width: 98%; height: 795rpx; margin: 5rpx; border:1px solid #f9be31;" canvas-id="firstcanvas" bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true"></canvas>
   </view>
 
   <view class="flex-wrp" style="flex-direction:row">
     <button class="Button_type" bindtap='start_draw'>开始</button>
     <button class="Button_type" bindtap='cancel_draw'>取消</button>
     <button class="Button_type" bindtap='next_step'>下一步</button>
+    <button bindtap='storedata'>b</button>
   </view>
   
 </view>

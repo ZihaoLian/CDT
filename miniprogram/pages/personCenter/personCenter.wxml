@@ -6,3 +6,10 @@
         </view>
     </view>
 </view>
+
+<view>
+  <button>编辑下个人信息</button>
+  <button>查看最近测试结果</button>
+  <button>疾病趋势</button>
+  <button>帮助与反馈</button>
+</view>

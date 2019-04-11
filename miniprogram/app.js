@@ -1,4 +1,5 @@
 //app.js
+//const worker = wx.createWorker('workers/request/index.js')
 App({
   onLaunch: function () {
     wx.getSystemInfo({
@@ -44,3 +45,13 @@ App({
     userInfo: null
   }
 })
+
+// worker.onMessage(function(res){
+//   console.log(res)
+// })
+
+// worker.postMessage({
+//   msg: 'hello, worker'
+// })
+
+// worker.terminate()

@@ -36,12 +36,11 @@
 
   .flex-wrp {
   display: flex;
-  border-bottom: 1px solid rgb(220, 220, 220);
 }
 
 .Button_type{
   line-height: 80rpx;
-  margin-left: 40rpx;
+  margin-left: 75rpx;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
   font-size: 28rpx;

@@ -11,7 +11,8 @@ var t_num = 0 ;
 var record_x = 0;
 var record_y = 0;
 var record_t = 0;
-var filepath = '' //文件暂时存储的路径
+var filepath = '' ;//文件暂时存储的路径
+const fs = wx.getFileSystemManager(); //获取文件管理系统
 
 Page({
 
@@ -21,6 +22,7 @@ Page({
   data: {
     CustomBar: app.globalData.CustomBar,
     StatusBar: app.globalData.StatusBar,
+    isDraw: false
   },
 
   /**
@@ -35,7 +37,7 @@ Page({
    */
   onReady: function () {
     this.context = wx.createCanvasContext('firstcanvas'); //获取画布
-    this.fs = wx.getFileSystemManager(); //获取文件管理系统
+    
   },
 
   /**
@@ -80,21 +82,15 @@ Page({
 
   },
 
-  //实现将数据存入文件中
-  storedata: function (record_x, record_y, record_t) {
-    var fileName = 'data.docx'
-    var s = record_x.toString() + record_y.toString() + record_t.toString(); //将x,y,t写入文件中
-    this.fs.appendFileSync(`${wx.env.USER_DATA_PATH}/` + fileName, s, 'utf8');
-    filepath = `${wx.env.USER_DATA_PATH}/` + fileName;
-    //上传到云文件中
-    wx.cloud.uploadFile({
-      cloudPath: 'data.docx',
-      filePath: filepath,
-    })
-  },
-
+  
   // 开始绘制线条
   lineBegin: function (x, y) {
+    // if(!this.data.isDraw){
+    //   wx.showModal({
+    //     title: '提醒',
+    //     content: '请先点击开始按钮再开始画钟',
+    //   })
+    // }
     begin = true;
     this.context.beginPath();
     startX = x;
@@ -105,9 +101,7 @@ Page({
   // 绘制线条中间添加点
   lineAddPoint: function (x, y) {
     this.context.moveTo(startX, startY)
-    record_XY(x, y); //开始每过12ms记录一次位置
-    //storedata(x, y, t_num); //存储进文件里
-    // console.log(startX, startY);
+    record_XY(startX, startY); //开始每过12ms记录一次位置
     this.context.lineTo(x, y);
     this.context.stroke();
     startX = x;
@@ -124,10 +118,10 @@ Page({
   // 绘制开始 手指开始按到屏幕上
   touchStart: function (e) {
     this.lineBegin(e.touches[0].x, e.touches[0].y)
-    curDrawArr.push({
-      x: e.touches[0].x,
-      y: e.touches[0].y
-    });
+    // curDrawArr.push({
+    //   x: e.touches[0].x,
+    //   y: e.touches[0].y
+    // });
   },
 
   // 绘制中 手指在屏幕上移动
@@ -135,10 +129,10 @@ Page({
     if (begin) {
       this.lineAddPoint(e.touches[0].x, e.touches[0].y);
       this.context.draw(true);
-      curDrawArr.push({
-        x: e.touches[0].x,
-        y: e.touches[0].y
-      });
+      // curDrawArr.push({
+      //   x: e.touches[0].x,
+      //   y: e.touches[0].y
+      // });
     }
   },
 
@@ -146,16 +140,19 @@ Page({
   touchEnd: function () {
     curDrawArr.push({ //用来标记笔画的结束
       x: -1,
-      y: -1
+      y: -1,
+      t: -1
     })
     drawInfos.push(curDrawArr); //将笔画存入到数组中
     curDrawArr = []; //将笔画清空，以备继续使用
+
+    this.storedata(drawInfos).bind(this);//存储进文件里
     this.lineEnd();
   },
 
   //开始画钟
   start_draw: function(){
-    console.log(t_num.toString())
+    this.data.isDraw = true; // 允许开始画钟
   },
 
   //实现不将数据存入云存储钟
@@ -172,6 +169,46 @@ Page({
 
   cancel_draw: function(){
 
+  },
+
+  // storedata(drawInfos) {
+  //   wx.cloud.callFunction({
+  //     name: 'upLoadData',
+  //     complete: console.log("hh")
+  // })
+
+  //实现将数据存入文件中
+  storedata(drawInfos) {
+    var fileName = 'data3.doc'
+  var s1 = "(" + 2 + " " + 3 + " " + 3 + "/n";
+    //var s = record_x.toString() + record_y.toString() + record_t.toString(); //将x,y,t写入文件中
+    //fs.writeFileSync('C:/Data/' + fileName, s1, 'utf8');
+    fs.writeFileSync(`${wx.env.USER_DATA_PATH}/` + fileName, s1, 'utf8');
+    //fs.appendFileSync(`${wx.env.USER_DATA_PATH}/` + fileName, drawInfos, 'utf8');
+    //var filepath = wx.env.USER_DATA_PATH + '/' + fileName
+    //filepath = 'C:/Data/' + fileName;
+
+    //上传到云文件中
+    wx.cloud.init();
+    wx.cloud.uploadFile({
+      cloudPath: 'data3.doc',
+      filePath: filepath,
+      name: fileName,
+    })
+  // wx.getSavedFileList({
+  //   success(res) {
+  //     if (res.fileList.length > 0) {
+  //       wx.removeSavedFile({
+  //         filePath: res.fileList[0].filePath,
+  //         complete(res) {
+  //           console.log(res)
+  //         }
+  //       })
+  //     }
+  //   }
+  // })
+
+  console.log("ni")
   }
 })
 
@@ -179,8 +216,16 @@ Page({
 function record_XY(x, y) {
   t_num = time_num * 12;
   timer = setTimeout(function () {
-    console.log(x, y, t_num); 
+    //console.log(x, y, t_num); 
+    curDrawArr.push({
+      x: x,
+      y: y,
+      t: t_num
+    });
     time_num = time_num + 1;
     record_XY(x, y);
   }, 12)
 }
+
+
+
