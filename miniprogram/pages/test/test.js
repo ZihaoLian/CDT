@@ -12,7 +12,7 @@ var record_x = 0;
 var record_y = 0;
 var record_t = 0;
 var filepath = '' ;//文件暂时存储的路径
-const fs = wx.getFileSystemManager(); //获取文件管理系统
+const fs = wx.getFileSystemManager(); //获取文件管理系s统
 
 Page({
 
