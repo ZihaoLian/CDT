@@ -1,0 +1,11 @@
+<!--pages/analyse/analyse.wxml-->
+<view class='navigatorColor' style="height:{{CustomBar}}rpx;">
+    <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}rpx;padding-top:{{StatusBar}}rpx;">
+        <view class='navigator_text' style='top:{{StatusBar}}rpx;height:{{CustomBar-StatusBar}}rpx;'>
+            疾病分析
+        </view>
+    </view>
+</view>
+
+<button bindtap='backtohome'>恭喜你，你没病  </button>
+

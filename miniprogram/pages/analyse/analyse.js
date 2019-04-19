@@ -1,4 +1,4 @@
-// pages/personCenter/personCenter.js
+// pages/analyse/analyse.js
 const app = getApp();
 Page({
 
@@ -8,6 +8,7 @@ Page({
   data: {
     CustomBar: app.globalData.CustomBar / 568 * app.globalData.sclar * 750,
     StatusBar: app.globalData.StatusBar / 568 * app.globalData.sclar * 750,
+    canvasHeight: 341 / 568 * app.globalData.sclar * 750,
   },
 
   /**
@@ -64,5 +65,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  backtohome: function(){
+    wx.navigateBack({
+      
+    })
   }
 })

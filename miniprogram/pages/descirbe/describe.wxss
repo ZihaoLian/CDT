@@ -1,0 +1,11 @@
+/* pages/descirbe/describe.wxss */
+.navigatorColor {
+  text-align: center;
+  font-size: 45rpx;
+  background: linear-gradient(to right, #fcbb1e, #fcef1e );
+  color: #ffffff
+}
+
+.navigator_text{
+  margin-top: 20rpx;
+}

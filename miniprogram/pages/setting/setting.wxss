@@ -1,0 +1,17 @@
+/* pages/setting/setting.wxss */
+.navigatorColor {
+  text-align: center;
+  font-size: 45rpx;
+  background: linear-gradient(to right, #fcbb1e, #fcef1e );
+  color: #ffffff;
+}
+
+.navigator_text{
+  margin-top: 20rpx;
+}
+
+.voice_tip{
+  line-height: 90rpx;
+  font-size:  50rpx;
+  margin: 20rpx;
+}

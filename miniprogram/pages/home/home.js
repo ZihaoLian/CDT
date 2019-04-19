@@ -9,16 +9,19 @@ Page({
     autoplay: true,
     indicatorDots: true,
     circular_information: true,
-    CustomBar: app.globalData.CustomBar,
-    StatusBar: app.globalData.StatusBar,
-    screen_width: 0
+    CustomBar: app.globalData.CustomBar / 568 * app.globalData.sclar * 750,
+    StatusBar: app.globalData.StatusBar / 568 * app.globalData.sclar * 750,
   }, 
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.getSystemInfo({
+      success: function(res) {
+        
+      },
+    })
   },
 
   /**
@@ -70,16 +73,21 @@ Page({
 
   },
 
-  query_jiaocheng(){
+  query_jiaocheng: function (){
     wx.navigateTo({
       url: '../manual/manual',
     })
   },
 
-  toTest(){
-    console.log(">>>")
-    wx.navigateTo({
+  toDescribe: function(){
+    wx.switchTab({
       url: '../test/test',
+    })
+  },
+
+  setting: function (){
+    wx.navigateTo({
+      url: '../setting/setting',
     })
   }
 })

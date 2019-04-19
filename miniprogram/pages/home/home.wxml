@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
-<view class='navigatorColor' style="height:{{CustomBar}}px;">
-    <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
-        <view class='navigator_text' style='top:{{StatusBar}}px;height:{{CustomBar-StatusBar}}px;'>
+<view class='navigatorColor' style="height:{{CustomBar}}rpx;">
+    <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}rpx;padding-top:{{StatusBar}}rpx;">
+        <view class='navigator_text' style='top:{{StatusBar}}rpx;height:{{CustomBar-StatusBar}}rpx;'>
             AD画钟测试
         </view>
     </view>
@@ -10,15 +10,15 @@
 <view>
   <swiper autoplay="{{autoplay}}" indicator-dots="{{indicatorDots}}" indicator-color="#gray"	 indicator-active-color="yellow" circular="{{circular_information}}" interval="1000">
     <swiper-item>
-      <image src="../../image/oldman.png" aspectFit="{{true}}" type="width={{screen_width}}"></image>
+      <image src="../../image/oldman.png" aspectFit="{{true}}" type="width=320px;"></image>
     </swiper-item>
 
   <swiper-item>
-    <image src="../../image/oldman2.png" aspectFit="{{true}}"></image>
+    <image src="../../image/oldman2.png" aspectFit="{{true}}" type="width=750rpx;"></image>
   </swiper-item>
 
   <swiper-item>
-    <image src="../../image/oldman3.png" aspectFit="{{true}}"></image>
+    <image src="../../image/oldman3.png" aspectFit="{{true}}" type="width=750rpx;"></image>
   </swiper-item>
   </swiper>
 </view>
@@ -28,13 +28,13 @@
     <image src="../../image/jiaocheng.png" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
     <text class="row_person_font">教程</text>
   </view>
-    
-  <view class="flex-wrp-person" style="flex-direction:column" bindtap='toTest'>
-    <image src="../../image/clock_test.jpg" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
-    <text class="row_person_font">测试</text>
+
+  <view class="flex-wrp-person" style="flex-direction:column" bindtap='toDescribe'>
+    <image src="../../image/describe.png" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
+    <text class="row_person_font">说明</text>
   </view>
 
-  <view class="flex-wrp-person" style="flex-direction:column">
+  <view class="flex-wrp-person" style="flex-direction:column" bindtap='setting'>
     <image src="../../image/set.png" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
     <text class="row_person_font">设置</text>
   </view>

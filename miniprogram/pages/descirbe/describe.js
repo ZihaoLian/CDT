@@ -1,4 +1,4 @@
-// pages/personCenter/personCenter.js
+// pages/descirbe/describe.js
 const app = getApp();
 Page({
 

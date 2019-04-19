@@ -1,4 +1,4 @@
-// pages/personCenter/personCenter.js
+// pages/setting/setting.js
 const app = getApp();
 Page({
 
@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    CustomBar: app.globalData.CustomBar / 568 * app.globalData.sclar * 750,
-    StatusBar: app.globalData.StatusBar / 568 * app.globalData.sclar * 750,
+    CustomBar: app.globalData.CustomBar,
+    StatusBar: app.globalData.StatusBar,
   },
 
   /**
@@ -64,5 +64,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  switchChange: function(e){
+    console.log('switch 发生 change 事件，携带值为', e.detail.value)
   }
 })

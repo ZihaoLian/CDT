@@ -6,16 +6,24 @@ Page({
    */
   data: {
     manualImg: [{
-      url: 'https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/dcc451da81cb39dbdfa123c0d0160924aa1830c6.jpg',
+      url: '../../image/1.png',
         txt: "教程1"
       },
       {
-        url: 'https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/dcc451da81cb39dbdfa123c0d0160924aa1830c6.jpg',
+        url: '../../image/2.png',
         txt: "教程2"
       },
       {
-        url: 'https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/dcc451da81cb39dbdfa123c0d0160924aa1830c6.jpg',
+        url: '../../image/3.png',
         txt: "教程3"
+      },
+      {
+        url: '../../image/4.png',
+        txt: "教程4"
+      },
+      {
+        url: '../../image/5.png',
+        txt: "教程5"
       }
     ],
     index:0,
@@ -33,7 +41,7 @@ Page({
         success: function(res) {
           if (res.confirm) {
             console.log('用户点击确定')
-            wx.redirectTo({
+            wx.switchTab({
               url: '../test/test'
             });
           } else if (res.cancel) {
