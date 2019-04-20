@@ -7,8 +7,7 @@ var curDrawArr = []; //用来存储每个笔画的轨迹
 var timer; //计时器
 var time_num = 0;
 var t_num = 0;
-var is_next_step = false;
-var is_empty = false;
+
 wx.cloud.init()
 
 Page({
@@ -27,6 +26,8 @@ Page({
       showModal: false,
       is_begin_draw: false,
       showModalStatus: false,
+      is_empty : false,
+      is_next_step: false
     },
 
     /**
@@ -50,6 +51,7 @@ Page({
       this.context = wx.createCanvasContext('firstcanvas'); //获取画布
       this.fs = wx.getFileSystemManager(); //获取文件管理系统
       this.db = wx.cloud.database(); //获取数据库系统
+      this.getOpen(); //获得用户的openid来自动命名文件
       if(app.globalData.userLoginNumber > 1){
         this.clear(); //在这里必须将画布画成白色，否则后面将画布转化为图片背景就会变成透明的
       }
@@ -99,7 +101,6 @@ Page({
         startX = x;
         startY = y;
         this.lineAddPoint(x, y);
-        is_next_step = true; //放在这里防止用户不画钟就点击下一步
       }
     },
 
@@ -124,6 +125,9 @@ Page({
         this.tishiStart();
       }
       else{
+        this.setData({
+          is_next_step: true //放在这里防止用户不画钟就点击下一步
+        })
         this.lineBegin(e.touches[0].x, e.touches[0].y)
       }
     },
@@ -151,12 +155,12 @@ Page({
     this.context.setFillStyle('#ffffff');
     this.context.fillRect(app.globalData.screen_width * (7 / 750), app.globalData.screen_heigh * (125 / 568), app.globalData.screen_width * 0.98, 341 / 568 * app.globalData.screen_height);
     this.context.draw();
-    this.getOpen(); //获得用户的openid来自动命名文件
 
     //设置上传路径 和 允许开始画钟
     this.setData({
       filepath: this.data.filepath + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc',
-      is_begin_draw: true
+      is_begin_draw: true,
+      is_empty: false
     })
 
     this.createNonceStr(); //随机生成时钟点数
@@ -165,7 +169,7 @@ Page({
 
   //下一步进行复现画钟
   next_step: function() {
-    if(is_next_step && !is_empty){ //防止没开始就点击下一步了
+    if(this.data.is_next_step && !this.data.is_empty){ //防止没开始就点击下一步了
       wx.showToast({
         title: '请稍等片刻上传数据',
         icon: 'loading'
@@ -173,7 +177,9 @@ Page({
       this.store();
       clearTimeout(timer); //关掉定时器
       this.setData({
-        is_begin_draw: false //防止下次进来后就直接进行画钟
+        is_begin_draw: false, //防止下次进来后就直接进行画钟
+        is_next_step: false,
+        is_empty: true
       })
       //this.clear(); // 清楚数据，以备下次继续使用
       wx.showToast({
@@ -201,7 +207,7 @@ Page({
   },
 
   cancel_step: function(){
-    if(is_next_step){
+    if(this.data.is_next_step){
       wx.showModal({
         title: '确定要取消吗?',
         content: '取消后将重新进行测试!!!',
@@ -209,12 +215,16 @@ Page({
         confirmColor: '#000000',
         success(res) {
           if (res.confirm) {
-          } else if (res.cancel) {
           }
         }
       })
       this.clear(); // 清空数组内容 
-      is_empty = true //防止点击“取消”后点击“下一步”
+      this.setData({
+        is_empty : true, //防止点击“取消”后点击“下一步”
+        is_begin_draw: false,
+        is_next_step: false
+      })
+      
     }
     else{
       this.void_withoutDraw();
@@ -264,7 +274,7 @@ Page({
     }
 
     //判断是否上传数据
-    if (!is_empty) {
+    if (!this.data.is_empty) {
       this.save_data_draw(this.data.filename.toString()) //保存数据
       this.save_first_draw(this.data.filename.toString()) //保存图片
     }

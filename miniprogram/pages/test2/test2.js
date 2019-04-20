@@ -8,8 +8,7 @@ var curDrawArr = []; //用来存储每个笔画的轨迹
 var timer; //计时器
 var time_num = 0;
 var t_num = 0;
-var is_next_step = false;
-var is_empty = false;
+
 
 wx.cloud.init()
 
@@ -28,6 +27,8 @@ Page({
     filename: '',
     is_begin_draw: false,
     is_finish: false,
+    is_empty: false,
+    is_next_step: false
   },
 
   /**
@@ -49,6 +50,7 @@ Page({
   onShow: function () {
     this.context = wx.createCanvasContext('firstcanvas'); //获取画布
     this.fs = wx.getFileSystemManager(); //获取文件管理系统
+    this.getOpen(); //获取命名需要
     if (app.globalData.userLoginNumber > 1) {
       this.clear(); //注意这个变量才是时间变化的关键
     }
@@ -97,8 +99,7 @@ Page({
       startX = x;
       startY = y;
       //this.context.moveTo(startX, startY)
-      this.lineAddPoint(x, y);
-      is_next_step = true
+      this.lineAddPoint(x, y);    
     }
   },
 
@@ -123,6 +124,9 @@ Page({
       this.tishiStart();
     }
     else{
+      this.setData({
+        is_next_step: true
+      })
       this.lineBegin(e.touches[0].x, e.touches[0].y)
     }
     
@@ -151,19 +155,20 @@ Page({
     this.context.setFillStyle('#ffffff');
     this.context.fillRect(app.globalData.screen_width * (7 / 750), app.globalData.screen_heigh * (125 / 568), app.globalData.screen_width * 0.98, 341 / 568 * app.globalData.screen_height);
     this.context.draw();
-    this.getOpen(); //获取命名需要
     this.setData({
       filepath: this.data.filepath + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_2.doc',
       is_begin_draw: true, 
+      is_empty: false
     })
     record_XY(); //开始记录数据
   },
 
   //结束画钟
   finish_step: function () {
-    if(is_next_step && !is_empty){
+    if(this.data.is_next_step && !this.data.is_empty){
       wx.showToast({
         title: '请稍等片刻上传数据',
+        icon: "loading"
       })
       this.store();
       clearTimeout(timer); //关掉定时器
@@ -187,7 +192,9 @@ Page({
         }
       })
       this.setData({
-        is_finish: true
+        is_finish: true,
+        is_next_step: false,
+        is_empty: true
       })
     }
     else{
@@ -214,7 +221,7 @@ Page({
       this.fs.appendFileSync(this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_2.doc', curDrawArr[j].x.toString() + ' ' + curDrawArr[j].y.toString() + ' ' + curDrawArr[j].t.toString() + '\n', 'utf8')
     }
     //判断是否上传数据
-    if (!is_empty) {
+    if (!this.data.is_empty) {
       this.save_draw_data(this.data.filename.toString())
       this.save_first_draw(this.data.filename.toString())
     }
@@ -289,30 +296,35 @@ Page({
   },
 
   cancel_step: function () {
-    if(is_next_step){
+    if(this.data.is_next_step){
       wx.showModal({
         title: '确定要取消吗?',
-        content: '取消后将重新进行测试!!!',
+        content: '取消后步骤一也将取消，将重新进行画钟测试',
         showCancel: false,
         confirmColor: '#000000',
         success(res) {
           if (res.confirm) {
+            // wx.switchTab({
+            //   url: '../home/home',
+            // })
+            wx.navigateBack({
+              
+            })
           } else if (res.cancel) {
           }
         }
       })
-      is_empty = true
+      this.setData({
+        is_empty: true,
+        is_begin_draw: false, // 防止取消后就不按开始按钮就能直接画钟
+        is_next_step: false
+      })
       this.clear(); // 清空数组内容
       clearTimeout(timer);
+
       //删除第一次上传的文件 
       this.deletecloudeFile('wx.env.USER_DATA_PATH' + '/CDTData/' + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc');
       this.deletecloudeFile('wx.env.USER_DATA_PATH' + '/CDTImage/' + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.png');
-
-      //判断用户在画完后取消
-    //   var o2 ={
-    //     path: 'wx.env.USER_DATA_PATH' + '/CDTData/' + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_2.doc'
-    //   }
-    //   this.fs.access(o2)
     }
     else{
       this.void_withoutDraw();
