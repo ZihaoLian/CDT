@@ -9,7 +9,6 @@ var timer; //计时器
 var time_num = 0;
 var t_num = 0;
 
-
 wx.cloud.init()
 
 Page({
@@ -28,7 +27,7 @@ Page({
     is_begin_draw: false,
     is_finish: false,
     is_empty: false,
-    is_next_step: false
+    is_next_step: false,
   },
 
   /**
@@ -60,7 +59,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    //this.delete_local_file();
   },
 
   /**
@@ -166,10 +165,11 @@ Page({
   //结束画钟
   finish_step: function () {
     if(this.data.is_next_step && !this.data.is_empty){
-      wx.showToast({
-        title: '请稍等片刻上传数据',
-        icon: "loading"
-      })
+      
+        wx.showToast({
+          title: '请稍等片刻上传数据',
+          icon: "loading",
+        })
       this.store();
       clearTimeout(timer); //关掉定时器
       ++app.globalData.userLoginNumber; //用来递增用户第几次进行测试
@@ -214,6 +214,33 @@ Page({
     })  
   },
 
+  //删除缓存文件
+  delete_local_file: function () {
+    var object = {
+        filepath: this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_2.doc'
+    }
+    this.fs.removeSavedFile(object);
+    // wx.removeSavedFile({
+    //   filePath: this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc',
+    //   complete: function (res) {
+    //     console.log(res._id)
+    //   }
+    // })
+    //wx.clearStorage(object)
+    // wx.getSavedFileList({
+    //   success: function (res) {
+    //     if (res.fileList.length > 0) {
+    //       wx.removeSavedFile({
+    //         filePath: res.fileList[0].filePath,
+    //         complete: function (res) {
+    //           console.log(res.fileList)
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
+  },
+
   //存储数据
   store() {
     this.fs.writeFileSync(this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() +'_2.doc', '-1 -1 -1\n', 'utf8');
@@ -224,6 +251,7 @@ Page({
     if (!this.data.is_empty) {
       this.save_draw_data(this.data.filename.toString())
       this.save_first_draw(this.data.filename.toString())
+      this.delete_local_file()
     }
   }, 
 

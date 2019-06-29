@@ -12,6 +12,10 @@ App({
         this.globalData.screen_height =e.screenHeight;
       }
     })
+
+    wx.cloud.init({
+      traceUser: true,
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -49,13 +53,3 @@ App({
     userLoginNumber: 1
   }
 })
-
-// worker.onMessage(function(res){
-//   console.log(res)
-// })
-
-// worker.postMessage({
-//   msg: 'hello, worker'
-// })
-
-// worker.terminate()

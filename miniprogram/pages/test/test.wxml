@@ -10,7 +10,6 @@
 <view>
   <view class="row">
     <text class="tip_style">步骤一：{{step_tip}}</text>
-    <!--image src="../../icon/tip.png" aspectFit="{{true}}" style="width: 60rpx; height: 60rpx" class="tip_image_style"></image-->
   </view>
 
   <view class="canvasType">

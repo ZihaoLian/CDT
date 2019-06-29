@@ -10,7 +10,6 @@
 <view>
   <view class="row">
     <text class="tip_style">步骤二：{{step_tip}}</text>
-    <!--image src="../../icon/tip.png" aspectFit="{{true}}" style="width: 60rpx; height: 60rpx" class="tip_image_style"></image-->
   </view>
 
   <view class="canvasType">
@@ -22,48 +21,4 @@
     <button class="Button_type" bindtap='finish_step'>结束</button>
     <button class="Button_type" bindtap='cancel_step'>取消</button>
   </view>
-</view>
-<!--button class="Button_type_another" bindtap='back'>再次测试</button>
-
-
-<!--mask-->
-<!--view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
-<!--content-->
-<!--使用animation属性指定需要执行的动画-->
-<!--view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
- 
-  <!--drawer content-->
-  <!--view class="drawer_title">确定要取消吗?</view>
-  <view class="drawer_content">
-    <view class="top grid">
-      <label class="title col-0">取消后将从头再进行测试!!!</label>
-    </view>
-  </view >
-
-  <!--view class="flex-wrp">
-    <button class="btn_ok" bindtap="powerDrawer" data-statu="close">取消</button>
-    <button class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</button>
-  </view>
-
-</view-->
-
-<!--view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatusl}}">
-  <view class="modal-title">确定要取消吗？</view>
-  <view class="modal-content">
-    <view>取消后将重新进行测试!!!</view>
-  </view>
-  <view class="modal-footer">
-    <view class="btn-cancel" bindtap="powerDrawer" data-status="cancel">取消</view>
-    <view class="btn-confirm" bindtap="powerDrawer" data-status="confirm">确定</view>
-  </view>
-</view-->
-
-<!--view class="mask" bindtap='modelCancel' catchtouchmove="preventTouchMove" wx:if="{{showModalDlg}}"></view>
-<view class="modalDlg" wx:if="{{showModalDlg}}">
-    <text>确定要取消吗?</text>
-    <text>取消后将重新进行测试!!!</text>
-    <view>
-    <button bindtap='modelCancel'>取消</button>
-    <button bindtap='modelConfirm'>确认</button>
-    </view>
 </view>

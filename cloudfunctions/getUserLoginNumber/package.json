@@ -1,5 +1,5 @@
 {
-  "name": "upLoadData",
+  "name": "getUserLoginNumber",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

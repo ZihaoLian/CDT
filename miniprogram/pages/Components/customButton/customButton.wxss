@@ -1,8 +1,0 @@
-/* Components/customButton/customButton.wxss */
-.btn-container{
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}

@@ -27,7 +27,8 @@ Page({
       is_begin_draw: false,
       showModalStatus: false,
       is_empty : false,
-      is_next_step: false
+      is_next_step: false,
+      loginNumber: 1 //用户使用小程序进行测试次数
     },
 
     /**
@@ -61,8 +62,6 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function() {
-      //this.store()
-      //clearTimeout(timer); //关掉定时器
     },
 
     /**
@@ -150,6 +149,17 @@ Page({
       this.lineEnd();
     },
 
+  //获得用户登陆次数
+  get_userLogin: function(){
+    this.db.collection('User_Login').doc('9c4488c75cbadbfe02d9c311504dbe57').update({
+      data: {
+        login_number : 34
+      },
+      success: console.log,
+      fail: console.error
+    })
+  },
+
   //开始画钟
   start_draw: function() {
     this.context.setFillStyle('#ffffff');
@@ -165,10 +175,12 @@ Page({
 
     this.createNonceStr(); //随机生成时钟点数
     record_XY(); //开始记录数据
+    this.get_userLogin();
   },
 
   //下一步进行复现画钟
   next_step: function() {
+
     if(this.data.is_next_step && !this.data.is_empty){ //防止没开始就点击下一步了
       wx.showToast({
         title: '请稍等片刻上传数据',
@@ -237,7 +249,7 @@ Page({
       hour: Math.floor(Math.random() * 120 % 12),
       minute: parseInt(Math.random() * 120 % 12)
     })
-    while (Math.abs(this.data.hour - this.data.minute) < 3 || Math.abs(this.data.hour - this.data.minute)>5){ //不让时针和分针靠的太近
+    while (Math.abs(this.data.hour - this.data.minute) < 3 || Math.abs(this.data.hour - this.data.minute)>4){ //不让时针和分针靠的太近
       this.setData({
         hour: Math.floor(Math.random() * 120 % 12),
         minute: parseInt(Math.random() * 120 % 12)
@@ -264,23 +276,57 @@ Page({
     })
   },
 
+    //获取数据库里的登陆次数来刷新文件命名
   //存储数据
   store() {
     this.record_clock(); //记录时钟点数
-    this.fs.writeFileSync(this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc', '-1 -1 -1\n', 'utf8')
+    // this.fs.writeFileSync(this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc', '-1 -1 -1\n', 'utf8')
+    console.log(this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc')
+    this.fs.writeFileSync(this.data.filepath.toString(), '-1 -1 -1\n', 'utf8')
+    console.log(this.data.filepath.toString())
 
     for (var j in curDrawArr) {
-      this.fs.appendFileSync(this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc', curDrawArr[j].x.toString() + ' ' + curDrawArr[j].y.toString() + ' ' + curDrawArr[j].t.toString() + '\n', 'utf8')
+      // this.fs.appendFileSync(this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc', curDrawArr[j].x.toString() + ' ' + curDrawArr[j].y.toString() + ' ' + curDrawArr[j].t.toString() + '\n', 'utf8')
+      this.fs.appendFileSync(this.data.filepath.toString(), curDrawArr[j].x.toString() + ' ' + curDrawArr[j].y.toString() + ' ' + curDrawArr[j].t.toString() + '\n', 'utf8')
     }
 
     //判断是否上传数据
     if (!this.data.is_empty) {
       this.save_data_draw(this.data.filename.toString()) //保存数据
       this.save_first_draw(this.data.filename.toString()) //保存图片
+      this.delete_local_file();
     }
     else{
       this.delete_clock();
     }
+  },
+
+  //删除缓存文件
+  delete_local_file: function(){
+    // var object = {
+    //   filepath: this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc'
+    // }
+    // this.fs.removeSavedFile(object);
+    // wx.removeSavedFile({
+    //   filePath: this.data.filepath.toString() + this.data.filename.toString() + '_' + app.globalData.userLoginNumber.toString() + '_1.doc',
+    //   complete: function (res) {
+    //     console.log(res._id)
+    //   }
+    // })
+    //wx.clearStorage(object);
+    // console.log("市场年会")
+    wx.getSavedFileList({
+      success: function (res) {
+        console.log(res.fileList)
+      }
+    })
+    wx.removeSavedFile({
+      filePath: this.data.filepath.toString(),
+      success: function () {
+        console.log("删除了本地缓存")
+      }
+    })
+    
   },
 
   //保存数据
