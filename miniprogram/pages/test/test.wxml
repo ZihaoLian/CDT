@@ -9,17 +9,18 @@
 
 <view>
   <view class="row">
-    <text class="tip_style">步骤一：{{step_tip}}</text>
+    <text class="tip_style">{{step_tip}}</text>
   </view>
 
   <view class="canvasType">
-    <canvas class="firstCanvas" style="width: 98%; height: {{canvasHeight}}rpx; margin: 7rpx; border:1rpx solid #f9be31;" canvas-id="firstcanvas" rgba='(255, 0, 0, 0.3)' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true" ></canvas>
+    <canvas class="firstCanvas" style="width: 98%; height: {{canvasHeight}}rpx; margin: 7rpx; border:1rpx solid #f9be31;" canvas-id="canvas" rgba='(255, 0, 0, 0.3)' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true" ></canvas>
   </view>
 
   <view class="flex-wrp" style="flex-direction:row">
     <button class="Button_type" bindtap='start_draw'>开始</button>
-    <button class="Button_type" bindtap='next_step'>下一步</button>
-    <button class="Button_type" bindtap="cancel_step">取消</button>
+    <button wx:if="{{!secondStep}}" class="Button_type" bindtap='next_step'>下一步</button>
+    <button wx:if="{{secondStep}}" class="Button_type" bindtap='finsh'>完成</button>
+    <button class="Button_type" bindtap="cancel_step">重画</button>
   </view>
   
 </view>

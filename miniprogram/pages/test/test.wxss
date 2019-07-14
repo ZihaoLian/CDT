@@ -40,9 +40,7 @@
 
 .Button_type{
   line-height: 80rpx;
-  margin-left: 66rpx;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
+  margin: 20rpx auto;
   font-size: 28rpx;
   background: linear-gradient(to right, #fcbb1e, #fcef1e );
   color: #ffffff
