@@ -64,5 +64,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  queryHistory: function(){
+    
   }
 })

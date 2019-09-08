@@ -1,0 +1,10 @@
+<!--components/list-item/list-item.wxml-->
+<view class="touch-item {{isTouchMove[index] ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" data-time="{{item.time}}" data-union-id="{{item.unionId}}" wx:for="{{list}}" wx:key="{{item.unionId}}">
+    <view class='mess'>
+        <view class="cu-item" hover-class='cur' hover-stay-time='100'>
+            <slot></slot>
+        </view>
+    </view>
+    <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+</view>
+

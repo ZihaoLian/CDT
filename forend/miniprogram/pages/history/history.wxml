@@ -1,0 +1,40 @@
+<!--pages/descirbe/describe.wxml-->
+<view class='navigatorColor' style="height:{{CustomBar}}rpx;">
+    <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}rpx;padding-top:{{StatusBar}}rpx;">
+        <view class='navigator_text' style='top:{{StatusBar}}rpx;height:{{CustomBar-StatusBar}}rpx;'>
+            最近测试结果
+        </view>
+    </view>
+</view>
+
+<view>
+    <view>
+        <view class="textStyle">
+            <text>测试时间：2019.09.06 14:00:00</text>
+        </view>
+        <view>
+            <button  bindtap="showDialog" class="btn">查看详情</button>
+            <dialog id="modal">
+                <view class="timeItem">
+                    <image src="https://static.runoob.com/images/demo/demo1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="timeItem">
+                    <image src="../../icon/testClock.png" style="height: 52rpx; width: 52rpx"></image>
+                    <span>正确时间:{{testTime}}</span>
+                </view>
+                <view class="timeItem">
+                    <image src="../../icon/result.png" style="height: 52rpx; width: 52rpx;"></image>
+                    <text style="fontStyle">测试结果:{{testResult}}</text>
+                </view>
+                <view class="timeItem">
+                    <image src="../../icon/resultYiJu.png" style="height: 52rpx; width: 52rpx;"></image>
+                    <text style="fontStyle">测试结果:{{testResult}}</text>
+                </view>
+            </dialog>
+        </view>
+    </view>
+
+    <list-item binddelete="onDelete" wx:key="" list="{{list}}" bindtap="showAnswerModal">
+        <text>hgg</text>
+    </list-item>
+</view>

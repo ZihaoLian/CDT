@@ -1,42 +1,43 @@
 {
-    "pages": [
-        "pages/home/home",
-        "pages/test/test",
-        "pages/analyse/analyse",
-        "pages/descirbe/describe",
-        "pages/setting/setting",
-        "pages/personCenter/personCenter",
-        "pages/manual/manual"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#ccc",
-        "navigationBarTitleText": "AD画钟测试",
-        "navigationBarTextStyle": "white",
-        "navigationStyle": "custom"
-    },
-    "tabBar": {
-        "selectedColor": "#f9be31",
-        "list": [
-            {
-                "text": "首页",
-                "pagePath": "pages/home/home",
-                "iconPath": "icon/home.png",
-                "selectedIconPath": "icon/home_selected.png"
-            },
-            {
-                "text": "测试",
-                "pagePath": "pages/test/test",
-                "iconPath": "icon/clock_test.png",
-                "selectedIconPath": "icon/clock_test_selected.png"
-            },
-            {
-                "text": "我的",
-                "pagePath": "pages/personCenter/personCenter",
-                "iconPath": "icon/personinfo.png",
-                "selectedIconPath": "icon/personinfo_selected.png"
-            }
-        ]
-    },
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/history/history",
+    "pages/home/home",
+    "pages/test/test",
+    "pages/analyse/analyse",
+    "pages/descirbe/describe",
+    "pages/setting/setting",
+    "pages/personCenter/personCenter",
+    "pages/manual/manual"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "AD画钟测试",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "selectedColor": "#f9be31",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_selected.png"
+      },
+      {
+        "text": "测试",
+        "pagePath": "pages/test/test",
+        "iconPath": "icon/clock_test.png",
+        "selectedIconPath": "icon/clock_test_selected.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/personCenter/personCenter",
+        "iconPath": "icon/personinfo.png",
+        "selectedIconPath": "icon/personinfo_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }
