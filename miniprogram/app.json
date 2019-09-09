@@ -1,18 +1,15 @@
 {
     "pages": [
         "pages/home/home",
+        "pages/person/home/home",
+        "pages/person/edit/edit",
         "pages/test/test",
         "pages/analyse/analyse",
         "pages/descirbe/describe",
         "pages/setting/setting",
-        "pages/personCenter/personCenter",
         "pages/manual/manual"
     ],
     "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#ccc",
-        "navigationBarTitleText": "AD画钟测试",
-        "navigationBarTextStyle": "white",
         "navigationStyle": "custom"
     },
     "tabBar": {
@@ -32,7 +29,7 @@
             },
             {
                 "text": "我的",
-                "pagePath": "pages/personCenter/personCenter",
+                "pagePath": "pages/person/home/home",
                 "iconPath": "icon/personinfo.png",
                 "selectedIconPath": "icon/personinfo_selected.png"
             }

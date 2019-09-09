@@ -1,60 +1,6 @@
-<!--pages/home/home.wxml-->
-<view class='navigatorColor' style="height:{{CustomBar}}rpx;">
-    <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}rpx;padding-top:{{StatusBar}}rpx;">
-        <view class='navigator_text' style='top:{{StatusBar}}rpx;height:{{CustomBar-StatusBar}}rpx;'>
-            AD画钟测试
-        </view>
-    </view>
+<headerNoBack title="画钟测试" />
+
+<view class="index-container" style="top:{{CustomBar}}px; height:{{ContentHeight}}px;">
+    <image src="../../image/index.png" mode="aspectFit"></image>
+    <button>点击测试</button>
 </view>
-
-<view>
-  <swiper autoplay="{{autoplay}}" indicator-dots="{{indicatorDots}}" indicator-color="#gray"	 indicator-active-color="yellow" circular="{{circular_information}}" interval="1000">
-    <swiper-item>
-      <image src="../../image/oldman.png" aspectFit="{{true}}" type="width=320px;"></image>
-    </swiper-item>
-
-  <swiper-item>
-    <image src="../../image/oldman2.png" aspectFit="{{true}}" type="width=750rpx;"></image>
-  </swiper-item>
-
-  <swiper-item>
-    <image src="../../image/oldman3.png" aspectFit="{{true}}" type="width=750rpx;"></image>
-  </swiper-item>
-  </swiper>
-</view>
-
-<view class="flex-wrp" style="flex-direction:row">
-  <view class="flex-wrp-person" style="flex-direction:column" bindtap='query_jiaocheng'>
-    <image src="../../image/jiaocheng.png" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
-    <text class="row_person_font">教程</text>
-  </view>
-
-  <view class="flex-wrp-person" style="flex-direction:column" bindtap='toDescribe'>
-    <image src="../../image/describe.png" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
-    <text class="row_person_font">说明</text>
-  </view>
-
-  <view class="flex-wrp-person" style="flex-direction:column" bindtap='setting'>
-    <image src="../../image/set.png" aspectFit="{{true}}" style="width: 100rpx; height: 100rpx" class="row_person"></image>
-    <text class="row_person_font">设置</text>
-  </view>
-</view>
-
-<!--view class="flex-wrp-person" style="flex-direction:row" bindtap='query_jiaocheng'>
-    <text style="font-size=40rpx;" class="up_down">软件说明</text>
-    <image src="../../icon/up.png" aspectFit="{{true}}" style="width: 40rpx; height: 40rpx" class="up_down"></image>
-</view>
-
-<view>
-  <text class="font_shuoming"> 画钟测试------ 一种区分正常人和认知障碍患者的简单测试，</text>
-  <text class="font_shuoming"> 并已证明有助于诊断与神经系统疾病相关的认知功能障碍，</text>
-  <text class="font_shuoming"> 如阿尔茨海默病，帕金森病和其他痴呆症。关爱身边的老年</text>
-  <text class="font_shuoming"> 人，从我做起！</text>
-</view>
-
-<view class="flex-wrp-person" style="flex-direction:column" bindtap='query_jiaocheng'>
-  <label class="up_down">新手须知</label>
-  <text class="font_shuoming"> 新手请先看上面的教程了解如何测试再开始测试！！！</text>
-</view>
-
-

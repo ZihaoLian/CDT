@@ -1,0 +1,9 @@
+.navigatorColor {
+    text-align: center;
+    width: 100%;
+    font-size: 45rpx;
+    background: linear-gradient(45deg, #185189, #3866a4);
+    color: #fff;
+    position: fixed;
+    z-index: 1;
+}

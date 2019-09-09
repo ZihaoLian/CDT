@@ -6,16 +6,18 @@ App({
             success: e => {
                 this.globalData.StatusBar = e.statusBarHeight;
                 this.globalData.CustomBar = e.statusBarHeight + 46;
-                this.globalData.ContentHeight = e.screenHeight - this.globalData.CustomBar - 90;
-                this.globalData.sclar = e.screenHeight / e.screenWidth;
-                this.globalData.screen_width = e.screenWidth;
-                this.globalData.screen_height = e.screenHeight;
+                // 用于转换成rpx
+                this.globalData.scale = e.screenWidth / 750
+                this.globalData.ContentHeight = e.screenHeight - this.globalData.CustomBar - 60;
             }
         })
+
 
         wx.cloud.init({
             traceUser: true,
         })
+
+
         // 展示本地存储能力
         var logs = wx.getStorageSync('logs') || []
         logs.unshift(Date.now())
@@ -41,6 +43,12 @@ App({
                     })
                 }
             }
+        })
+
+        wx.cloud.callFunction({
+            name: "login"
+        }).then(res => {
+            this.globalData.openId = res.result.openid
         })
     },
     globalData: {
