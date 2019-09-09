@@ -1,0 +1,20 @@
+page{
+    background-color: #021031;
+}
+
+.index-container {
+    position: absolute;
+}
+
+.index-container>image {
+    height: 75%;
+    margin: 40rpx 0;
+}
+
+.index-container>button{
+    width: 80%;
+    border-radius: 45rpx; 
+    background-color: #1fccd7;
+    color: #000;
+    font-size: 41rpx;
+}

@@ -10,14 +10,7 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.5",
@@ -25,11 +18,12 @@
 	"projectname": "CDT",
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
-	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
