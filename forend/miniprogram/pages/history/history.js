@@ -81,9 +81,14 @@ Page({
     },
 
     onDelete: function(e) {
-        console.log(this.data.list)
-        console.log("HGHG")
+        // console.log(this.data.list)
+        // console.log("HGHG")
         //console.log(e.detail.list)
-    }
+        console.log("hghgh")
+        console.log(e)
+    },
   
+    parentMethod: function(e){
+        this.data.list = e.detail.list
+    }
 })

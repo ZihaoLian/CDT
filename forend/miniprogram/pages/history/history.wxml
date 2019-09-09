@@ -10,6 +10,7 @@
 <view>
     <view>
         <view class="textStyle">
+            <!-- <open-data type="userAvatarUrl"></open-data> -->
             <text>测试时间：2019.09.06 14:00:00</text>
         </view>
         <view>
@@ -34,7 +35,6 @@
         </view>
     </view>
 
-    <list-item binddelete="onDelete" wx:key="" list="{{list}}" bindtap="showAnswerModal">
-        <text>hgg</text>
+    <list-item binddelete="onDelete" wx:key="" list="{{list}}" bind:componentCall="parentMethod">
     </list-item>
 </view>

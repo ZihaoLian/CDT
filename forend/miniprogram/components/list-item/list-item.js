@@ -94,6 +94,15 @@ Component({
             let index = e.currentTarget.dataset.index
             this.data.list.splice(index, 1) //splice(index, number, addItem)返回删除的数组
             console.log(this.data.list)
+            // 所有要带到主页面的数据，都装在eventDetail里面
+            var eventDetail = {
+                list: this.data.list
+            }
+            // 触发事件的选项 bubbles是否冒泡，composed是否可穿越组件边界，capturePhase 是否有捕获阶段
+            var eventOption = {
+                composed: true
+            }
+            this.triggerEvent('componentCall', eventDetail, eventOption)
         },
 
         showModal(e) {

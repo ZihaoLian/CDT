@@ -2,7 +2,30 @@
 <view class="touch-item {{isTouchMove[index] ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" data-time="{{item.time}}" data-union-id="{{item.unionId}}" wx:for="{{list}}" wx:key="{{item.unionId}}">
     <view class='mess'>
         <view class="cu-item" hover-class='cur' hover-stay-time='100'>
-            <slot></slot>
+            <view class="textStyle">
+            <!-- <open-data type="userAvatarUrl"></open-data> -->
+            <text>测试时间：2019.09.06 14:00:00</text>
+        </view>
+        <view>
+            <button  bindtap="showDialog" class="btn">查看详情</button>
+            <dialog id="modal">
+                <view class="timeItem">
+                    <image src="https://static.runoob.com/images/demo/demo1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="timeItem">
+                    <image src="../../icon/testClock.png" style="height: 52rpx; width: 52rpx"></image>
+                    <span>正确时间:{{testTime}}</span>
+                </view>
+                <view class="timeItem">
+                    <image src="../../icon/result.png" style="height: 52rpx; width: 52rpx;"></image>
+                    <text style="fontStyle">测试结果:{{testResult}}</text>
+                </view>
+                <view class="timeItem">
+                    <image src="../../icon/resultYiJu.png" style="height: 52rpx; width: 52rpx;"></image>
+                    <text style="fontStyle">测试结果:{{testResult}}</text>
+                </view>
+            </dialog>
+        </view>
         </view>
     </view>
     <view class="del" catchtap="del" data-index="{{index}}">删除</view>

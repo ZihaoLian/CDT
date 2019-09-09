@@ -142,3 +142,14 @@
     white-space: pre-wrap;
     line-height: 35rpx;
 }
+
+.textStyle{
+    font-size: 36rpx;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 10rpx;
+    margin-bottom: 20rpx;
+}
