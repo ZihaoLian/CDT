@@ -1,0 +1,24 @@
+<headerNoBack title="个人信息" />
+
+<view>
+    <view class='raw_camera' style="top:{{StatusBar}}px">
+        <open-data type="userAvatarUrl" class="userinfo-avatar" mode="cover"></open-data>
+    </view>
+
+    <view class="name_style row">
+        <label class="label">姓名</label>
+        <input class="input" bindinput="changeProfile" data-which="realName" placeholder="请输入您的名字" value='{{profile.realName?profile.realName:""}}' />
+    </view>
+</view>
+
+
+<view class="row">
+    <view class="label">年龄</view>
+    <picker mode="selector" bindchange="changeProfile" data-which="age" class="picker" value="1" range="{{ageList}}">
+        <view class="picker">
+            {{profile.age?profile.age+"岁":""}}
+        </view>
+    </picker>
+</view>
+
+<button class="bg-green" bindtap="bindGetUserInfo">保存</button>

@@ -59,6 +59,7 @@ Page({
             this.context.beginPath();
             startX = x;
             startY = y;
+            console.log(startX, startY)
             this.lineAddPoint(x, y);
         }
     },

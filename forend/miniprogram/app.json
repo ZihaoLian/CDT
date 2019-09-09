@@ -1,8 +1,8 @@
 {
     "pages": [
-        "pages/home/home",
         "pages/person/home/home",
-        "pages/person/edit/edit",
+        "pages/history/history",
+        "pages/home/home",
         "pages/test/test",
         "pages/analyse/analyse",
         "pages/descirbe/describe",
@@ -10,6 +10,10 @@
         "pages/manual/manual"
     ],
     "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ccc",
+        "navigationBarTitleText": "AD画钟测试",
+        "navigationBarTextStyle": "white",
         "navigationStyle": "custom"
     },
     "tabBar": {
