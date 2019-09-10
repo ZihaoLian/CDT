@@ -24,5 +24,11 @@ Page({
                 url: '../edit/edit',
             })
         }
+    },
+
+    queryTestResult(){
+        wx.navigateTo({
+            url: '../../history/history',
+        })
     }
 })

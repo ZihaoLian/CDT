@@ -9,7 +9,7 @@
         <button class="editbtn" open-type='getUserInfo' bindgetuserinfo="getInfo">编辑个人资料</button>
     </view>
 
-    <view class="row">
+    <view class="row" bindtap="queryTestResult">
         <image src="../../../icon/history.png" style="vertical-align: middle;width:60rpx; height: 60rpx;"></image>
         <text style='padding-left: 17px;' class="text">查看最近测试结果</text>
     </view>
