@@ -1,4 +1,5 @@
 const app = getApp()
+const personapi = require("../../../api/personapi.js")
 
 // miniprogram/pages/person/edit/edit.js
 Page({
@@ -7,14 +8,12 @@ Page({
      * 页面的初始数据
      */
     data: {
-        CustomBar: app.globalData.CustomBar / 568 * app.globalData.sclar * 750,
-        StatusBar: app.globalData.StatusBar / 568 * app.globalData.sclar * 750,
         ageList: [...(new Array(100)).keys()],
     },
 
-    onLoad(){
+    onLoad() {
         this.setData({
-            profile:app.globalData.userInfo
+            profile: app.globalData.userInfo
         })
     },
 
@@ -25,8 +24,9 @@ Page({
         })
     },
 
-    bindGetUserInfo(){
+    bindGetUserInfo() {
         app.globalData.userInfo = this.data.profile
+        personapi.updateUser(this.data.profile).then(res => console.log(res))
         wx.navigateBack()
     }
 })

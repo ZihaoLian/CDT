@@ -7,7 +7,7 @@
 
     <view class="name_style row">
         <label class="label">姓名</label>
-        <input class="input" bindinput="changeProfile" data-which="realName" placeholder="请输入您的名字" value='{{profile.realName?profile.realName:""}}' />
+        <input class="input" bindinput="changeProfile" data-which="name" placeholder="请输入您的名字" value='{{profile.name?profile.name:""}}' />
     </view>
 </view>
 
