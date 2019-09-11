@@ -2,79 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6685e84-54ab-4b2b-bd28-40d66c7202c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/cdtTest/serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cdtTest/url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/file/serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/image/serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/person/serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/person/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudfunctions/getUserLoginNumber/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudfunctions/getUserLoginNumber/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudfunctions/getUserOpenId/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudfunctions/getUserOpenId/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudfunctions/login/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudfunctions/login/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/api/CDTapi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/app.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/attention.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/clock_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/clock_test_selected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/health.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/help.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/history.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/home_selected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/personinfo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/personinfo_selected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/tip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/icon/up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/clock_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/describe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/jiaocheng.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/oldman.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/oldman2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/oldman3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/image/shuoming.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/analyse/analyse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/analyse/analyse.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/analyse/analyse.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/analyse/analyse.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/descirbe/describe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/descirbe/describe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/descirbe/describe.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/descirbe/describe.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/home/home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/home/home.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/home/home.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/home/home.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/manual/manual.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/manual/manual.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/manual/manual.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/manual/manual.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/personCenter/personCenter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/personCenter/personCenter.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/personCenter/personCenter.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/personCenter/personCenter.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/setting/setting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/setting/setting.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/setting/setting.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/setting/setting.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/test/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/test/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/test/test.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/test/test.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/sitemap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="87" column="21" lean-forward="true" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+            <state relative-caret-position="1305">
+              <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -266,6 +194,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -302,12 +231,12 @@
       <updated>1567078347462</updated>
       <workItem from="1567078349624" duration="5213000" />
       <workItem from="1567156373746" duration="12000" />
-      <workItem from="1567224757817" duration="3640000" />
+      <workItem from="1567224757817" duration="4054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8865000" />
+    <option name="totallyTimeSpent" value="9279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="387" y="23" width="1053" height="821" extended-state="1" />
@@ -485,8 +414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="87" column="21" lean-forward="true" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+        <state relative-caret-position="1305">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
         </state>
       </provider>
     </entry>
