@@ -1,0 +1,27 @@
+<headerNoBack title="个人中心" />
+
+<view>
+    <view class="row1">
+        <view class="useinfo">
+            <open-data type="userNickName" lang="zh_CN" class="nickname"></open-data>
+            <open-data type="userAvatarUrl" class="userinfo-avatar" mode="cover"></open-data>
+        </view>
+        <button class="editbtn" open-type='getUserInfo' bindgetuserinfo="getInfo">编辑个人资料</button>
+    </view>
+
+    <view class="row" bindtap="queryTestResult">
+        <image src="../../../icon/history.png" style="vertical-align: middle;width:60rpx; height: 60rpx;"></image>
+        <text style='padding-left: 17px;' class="text">查看最近测试结果</text>
+    </view>
+
+    <view class="row">
+        <image src="../../../icon/health.png" style="vertical-align: middle;width:60rpx; height: 60rpx;"></image>
+        <text style='padding-left: 17px;' class="text">疾病趋势</text>
+    </view>
+
+    <view class="row">
+        <image src="../../../icon/help.png" style="vertical-align: middle;width:60rpx; height: 60rpx;"></image>
+        <button style='padding-left: 17px;' class="opinion" open-type='feedback'>帮助与反馈</button>
+    </view>
+
+</view>

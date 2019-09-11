@@ -1,11 +1,12 @@
 {
     "pages": [
+        "pages/person/home/home",
+        "pages/history/history",
         "pages/home/home",
         "pages/test/test",
         "pages/analyse/analyse",
         "pages/descirbe/describe",
         "pages/setting/setting",
-        "pages/personCenter/personCenter",
         "pages/manual/manual"
     ],
     "window": {
@@ -32,7 +33,7 @@
             },
             {
                 "text": "我的",
-                "pagePath": "pages/personCenter/personCenter",
+                "pagePath": "pages/person/home/home",
                 "iconPath": "icon/personinfo.png",
                 "selectedIconPath": "icon/personinfo_selected.png"
             }

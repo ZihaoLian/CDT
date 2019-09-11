@@ -1,0 +1,155 @@
+/* components/list-item/list-item.wxss */
+
+.cu-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 160rpx;
+    background: #fff;
+    padding: 0 30rpx;
+    transform: translateX(0rpx);
+    transition: all 0.1s ease-in-out 0s;
+    padding-left: 140rpx;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cu-avatar {
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #ccc;
+    color: #fff;
+    white-space: nowrap;
+    position: absolute;
+    left: 30rpx;
+    width: 120rpx;
+    height: 120rpx;
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+    border-radius: 15rpx;
+}
+
+.cu-tag.sm {
+    font-size: 20rpx;
+    padding: 0rpx 12rpx;
+    height: 32rpx;
+}
+
+.cu-item .content {
+    position: relative;
+    display: block;
+    line-height: 1.6em;
+    flex: 1;
+    font-size: 37rpx;
+    left: 40rpx;
+}
+
+.text-grey {
+    color: #8799a3;
+}
+
+.text-xs {
+    font-size: 20rpx;
+}
+
+.text-sm {
+    font-size: 30rpx;
+}
+
+.text-gray {
+    color: #aaa;
+}
+
+.cur {
+    background-color: #fcf7e9;
+}
+
+.action {
+    text-align: center;
+    margin-top: 10rpx;
+    right: 10rpx;
+    display: block;
+}
+
+.cu-tag {
+    margin-top: 10rpx;
+    font-size: 20rpx;
+    padding: 0 12rpx;
+    height: 32rpx;
+    background-color: #e54d42;
+    color: #fff;
+    vertical-align: middle;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50000rpx;
+}
+
+.touch-item {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.del {
+    background-color: red;
+    width: 200rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transform: translateX(200rpx);
+    transform: translateX(200rpx);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    font-size: 35rpx;
+}
+
+.mess {
+    width: 100%;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transform: translateX(200rpx);
+    transform: translateX(200rpx);
+    margin-left: -200rpx;
+}
+
+.touch-move-active .mess, .touch-move-active .del {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.single {
+    width: 450rpx;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.multiple {
+    display: block;
+    width: 450rpx;
+    word-break: break-all;
+    white-space: pre-wrap;
+    line-height: 35rpx;
+}
+
+.textStyle{
+    font-size: 36rpx;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 10rpx;
+    margin-bottom: 20rpx;
+}
