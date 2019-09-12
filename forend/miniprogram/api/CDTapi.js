@@ -2,13 +2,13 @@ const db = wx.cloud.database()
 const clockNumColl = db.collection("testResult")
 const fs = wx.getFileSystemManager(); //获取文件管理系统
 
-class CDTapi {
+module.exports = {
     // 保存测试记录
     storeClock(hour, minute, fileName, drawArr1, drawArr2, image1, image2) {
-        return new Promise(resolve=>{
+        return new Promise(resolve => {
             wx.showLoading({
                 title: '正在上传数据',
-                mask:true
+                mask: true
             })
             this.saveFileAndImage(fileName, drawArr1, image1, 1)
             this.saveFileAndImage(fileName, drawArr2, image2, 2)
@@ -24,8 +24,8 @@ class CDTapi {
                 resolve()
             })
         })
-        
-    }
+
+    },
 
     async saveFileAndImage(fileName, drawArr, image, idx) {
         // 创建数据文件1
@@ -47,5 +47,3 @@ class CDTapi {
         })
     }
 }
-
-module.exports = new CDTapi()

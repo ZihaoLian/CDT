@@ -4,11 +4,14 @@ page{
 
 .index-container {
     position: absolute;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .index-container>image {
     height: 75%;
-    margin: 40rpx 0;
+    width: 100%;
+    margin: 40rpx auto;
 }
 
 .index-container>button{
