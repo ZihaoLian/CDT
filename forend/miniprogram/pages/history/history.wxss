@@ -1,0 +1,43 @@
+/* pages/descirbe/describe.wxss */
+.navigatorColor {
+  text-align: center;
+  font-size: 45rpx;
+  background: linear-gradient(to right, #fcbb1e, #fcef1e );
+  color: #ffffff
+}
+
+.navigator_text{
+  margin-top: 20rpx;
+}
+
+.timeItem{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.fontStyle{
+    font-size: 50rpx;
+    color: white;
+}
+
+.btn{
+    width: 40%;
+    background: #7171e0;
+    font-size: 32rpx;
+    color: white;
+}
+
+.textStyle{
+    font-size: 36rpx;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 10rpx;
+    margin-bottom: 20rpx;
+}
