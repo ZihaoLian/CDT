@@ -1,13 +1,14 @@
 {
     "pages": [
-        "pages/person/home/home",
-        "pages/history/history",
         "pages/home/home",
+        "pages/history/history",
         "pages/test/test",
+        "pages/person/home/home",
         "pages/analyse/analyse",
         "pages/descirbe/describe",
         "pages/setting/setting",
-        "pages/manual/manual"
+        "pages/manual/manual",
+        "pages/test"
     ],
     "window": {
         "backgroundTextStyle": "light",

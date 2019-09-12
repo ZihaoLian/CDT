@@ -13,7 +13,7 @@ Page({
     data: {
         CustomBar: app.globalData.CustomBar / 568 * app.globalData.sclar * 750,
         StatusBar: app.globalData.StatusBar / 568 * app.globalData.sclar * 750,
-        canvasHeight: 341 / 568 * app.globalData.sclar * 750,
+        canvasHeight: (341 / 568) * app.globalData.sclar * 750 * 2,
         hour: 0,
         minute: 0,
         step_tip: '请点击开始按钮进行测试',
@@ -250,7 +250,6 @@ Page({
             }
         })
     },
-
 
     //清除画布上的内容
     clear: function() {

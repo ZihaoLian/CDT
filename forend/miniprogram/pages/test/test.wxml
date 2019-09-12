@@ -1,4 +1,5 @@
 <!--pages/test/test.wxml-->
+<headerNoBack title="测试" />
 <view class='navigatorColor' style="height:{{CustomBar}}rpx;">
     <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}rpx;padding-top:{{StatusBar}}rpx;">
         <view class='navigator_text' style='top:{{StatusBar}}rpx;height:{{CustomBar-StatusBar}}rpx;'>
@@ -13,7 +14,8 @@
   </view>
 
   <view class="canvasType">
-    <canvas class="firstCanvas" style="width: 98%; height: {{canvasHeight}}rpx; margin: 7rpx; border:1rpx solid #f9be31;" canvas-id="canvas" rgba='(255, 0, 0, 0.3)' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true" ></canvas>
+    <!-- <canvas class="firstCanvas" style="width: 98%; height: {{canvasHeight}}rpx; margin: 7rpx; border:1rpx solid blue;" canvas-id="canvas" rgba='(255, 0, 0, 0.3)' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true" ></canvas> -->
+    <canvas class="firstCanvas" style="width: 98%; height: 810rpx; margin: 7rpx; border:1rpx solid blue;" canvas-id="canvas" rgba='(255, 0, 0, 0.3)' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true" ></canvas>
   </view>
 
   <view class="flex-wrp" style="flex-direction:row">

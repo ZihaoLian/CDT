@@ -1,4 +1,5 @@
 /**app.wxss**/
+/* //@import "main.wxss"; */
 
 page {
     margin: 0;

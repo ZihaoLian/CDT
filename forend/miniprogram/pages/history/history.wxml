@@ -1,4 +1,5 @@
 <!--pages/descirbe/describe.wxml-->
+<headerNoBack title="查看最近测试结果" />
 <view class='navigatorColor' style="height:{{CustomBar}}rpx;">
     <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}rpx;padding-top:{{StatusBar}}rpx;">
         <view class='navigator_text' style='top:{{StatusBar}}rpx;height:{{CustomBar-StatusBar}}rpx;'>
@@ -37,4 +38,6 @@
 
     <list-item binddelete="onDelete" wx:key="" list="{{list}}" bind:componentCall="parentMethod">
     </list-item>
+
+    <!-- <dialog2></dialog2> -->
 </view>

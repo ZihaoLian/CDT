@@ -1,6 +1,8 @@
 {
     "usingComponents": {
         "dialog": "/components/dialog/dialog",
-        "list-item": "/components/list-item/list-item"
+        "list-item": "/components/list-item/list-item",
+        "headerNoBack": "/components/headerNoBack/headerNoBack",
+        "dialog2": "/components/dialog2/dialog2"
     }
 }
