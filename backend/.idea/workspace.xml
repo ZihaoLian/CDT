@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30e63eb2-1e59-4bb2-a572-be65b5162e3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/file/url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/migrations/0002_cdttest_person.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cdtTest/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/cdtTest/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/file/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/file/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/image/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/image/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/person/migrations/0002_auto_20190909_1448.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/api/CDTapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/api/CDTapi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/app.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/pages/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/pages/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/pages/test/test.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/pages/test/test.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +51,13 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -34,7 +65,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xray/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -95,6 +126,7 @@
       <workItem from="1567912203471" duration="261000" />
       <workItem from="1567912534232" duration="15000" />
       <workItem from="1568007995445" duration="712000" />
+      <workItem from="1568341943529" duration="19020000" />
     </task>
     <servers />
   </component>

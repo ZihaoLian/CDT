@@ -1,11 +1,11 @@
 {
     "pages": [
+        "pages/test/test",
         "pages/testDetailed/testDetailed",
         "pages/home/home",
         "pages/person/home/home",
         "pages/dialog/dialog",  
         "pages/history/history",
-        "pages/test/test",
         "pages/analyse/analyse",
         "pages/descirbe/describe",
         "pages/setting/setting",

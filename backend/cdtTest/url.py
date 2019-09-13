@@ -3,5 +3,5 @@ from .views import CdtTestView
 
 
 urlpatterns = [
-    path('test/', CdtTestView.as_view({'post': 'create'})),
+    path('', CdtTestView.as_view({'post': 'create'})),
 ]

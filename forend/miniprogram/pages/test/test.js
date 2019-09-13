@@ -13,7 +13,8 @@ Page({
     data: {
         CustomBar: app.globalData.CustomBar / 568 * app.globalData.sclar * 750,
         StatusBar: app.globalData.StatusBar / 568 * app.globalData.sclar * 750,
-        canvasHeight: (341 / 568) * app.globalData.sclar * 750 * 2,
+        // canvasHeight: (341 / 568) * app.globalData.sclar * 750 * 2,
+        canvasHeight: (820 / 1334) * app.globalData.sclar * 1334 * 2,
         hour: 0,
         minute: 0,
         step_tip: '请点击开始按钮进行测试',
@@ -27,7 +28,6 @@ Page({
         image1: "",
         image2: "",
         secondStep: false
-
     },
 
 
@@ -161,8 +161,6 @@ Page({
 
             this.clear()
             clearInterval(this.data.interval); //关掉定时器
-
-
         } else {
             this.void_withoutDraw();
         }
