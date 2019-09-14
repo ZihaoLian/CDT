@@ -2,6 +2,8 @@
     "pages": [
         "pages/test/test",
         "pages/testDetailed/testDetailed",
+        
+       
         "pages/home/home",
         "pages/person/home/home",
         "pages/dialog/dialog",  
