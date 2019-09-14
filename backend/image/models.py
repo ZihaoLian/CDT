@@ -10,4 +10,4 @@ class Image(models.Model):
 
     class Meta:
         db_table = 'image'
-
+        # unique_together = ("testTime", "person", "name")  # 让testTime和person同时作为主键

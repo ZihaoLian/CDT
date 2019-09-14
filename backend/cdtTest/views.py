@@ -8,3 +8,10 @@ class CdtTestView(ModelViewSet):
     serializer_class = CdtTestSerializer
     queryset = CdtTest.objects.all()
 
+
+
+
+
+
+
+

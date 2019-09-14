@@ -1,0 +1,5 @@
+opencv2
+docx
+pypiwin32
+sklearn
+scipy

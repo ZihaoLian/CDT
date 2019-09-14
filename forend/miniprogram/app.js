@@ -15,7 +15,7 @@ App({
             }
         })
 
-
+        // 云开发初始化
         wx.cloud.init({
             traceUser: true,
         })

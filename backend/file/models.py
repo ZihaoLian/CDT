@@ -10,3 +10,4 @@ class File(models.Model):
 
     class Meta:
         db_table = 'file'
+        # unique_together = ("testTime", "person", "name")  # 让testTime和person同时作为主键
