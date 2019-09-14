@@ -1,7 +1,5 @@
 {
     "component": true,
     "usingComponents": {
-        "dialog": "/components/dialog/dialog",
-        "list-item": "/components/list-item/list-item"
     }
 }

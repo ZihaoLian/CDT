@@ -128,7 +128,7 @@
 }
 
 .single {
-    width: 450rpx;
+    width: 480rpx;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -137,19 +137,8 @@
 
 .multiple {
     display: block;
-    width: 450rpx;
+    width: 480rpx;
     word-break: break-all;
     white-space: pre-wrap;
     line-height: 35rpx;
-}
-
-.textStyle{
-    font-size: 36rpx;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    margin: 10rpx;
-    margin-bottom: 20rpx;
 }

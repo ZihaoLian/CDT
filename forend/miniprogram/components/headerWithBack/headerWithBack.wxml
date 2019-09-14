@@ -1,0 +1,8 @@
+<view class='navigatorColor' style="height:{{CustomBar}}px;">
+    <view class="cu-bar fixed my-bg-gradual-blue" style="height:{{CustomBar}}px;">
+        <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+            <text class='icon-back' style='top:{{StatusBar}}px; line-height:{{CustomBar-StatusBar}}px;'></text>
+        </navigator>
+        <view class='content' style='top:{{StatusBar}}px; line-height:{{CustomBar-StatusBar}}px;'>{{title}}</view>
+    </view>
+</view>

@@ -1,13 +1,14 @@
 const app = getApp()
 
 const subapi = `${app.globalData.host}/api/v1/person`
+
 module.exports = {
     login() {
         return app.get(`${subapi}/person/${app.globalData.userInfo.openId}/`)
     },
 
     newUser() {
-        return app.post(`${subapi}/people/`, app.globalData.userInfo)
+        return app.post(`${subapi}/people/`, app.globalData.userInfo.openId)
     },
 
     updateUser(data) {

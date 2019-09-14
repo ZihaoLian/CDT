@@ -1,17 +1,15 @@
+
 // components/list-item/list-item.js
 Component({
     /**
      * 组件的属性列表
      */
-    options: {
-        multipleSlots: true // 在组件定义时的选项中启用多slot支持
-    },
-
     properties: {
-        list: { // 距离顶部多少时 触发 upper
+        historyList: { // 距离顶部多少时 触发 upper
             type: Array,
             value: []
         },
+
     },
 
     data: {
@@ -26,7 +24,7 @@ Component({
     methods: {
         //手指触摸动作开始 记录起点X坐标
         touchstart: function (e) {
-            let list = this.properties.messList
+            let list = this.properties.historyList
             //开始触摸时 重置所有删除
             for (var i in list) {
                 if (this.data.isTouchMove[i]) //只操作为true的
@@ -92,35 +90,17 @@ Component({
         //删除事件
         del: function (e) {
             let index = e.currentTarget.dataset.index
-            this.data.list.splice(index, 1) //splice(index, number, addItem)返回删除的数组
-            console.log(this.data.list)
-            // 所有要带到主页面的数据，都装在eventDetail里面
-            var eventDetail = {
-                list: this.data.list
-            }
-            // 触发事件的选项 bubbles是否冒泡，composed是否可穿越组件边界，capturePhase 是否有捕获阶段
-            var eventOption = {
-                composed: true
-            }
-            this.triggerEvent('componentCall', eventDetail, eventOption)
+            this.triggerEvent('delete', {
+                list: this.properties.historyList,
+                index
+            })
         },
 
-        showModal(e) {
-            let index = e.currentTarget.dataset.index
-            let detail = e.currentTarget.dataset.detail
-            let sendId = e.currentTarget.dataset.sendId
-            let which = e.currentTarget.dataset.which
-            let name = e.currentTarget.dataset.name
-            this.triggerEvent('tap', {
-                index: index,
-                detail: detail,
-                sender: sendId,
-                which: which,
-                name: name
+        showDetail(e){
+            wx.navigateTo({
+                url: '/pages/testDetailed/testDetailed',
             })
         }
-
-
     },
 
 })
