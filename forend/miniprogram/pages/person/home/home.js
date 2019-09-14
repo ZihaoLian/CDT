@@ -1,14 +1,12 @@
-// pages/personCenter/personCenter.js
 const app = getApp();
+const personapi = require("../../../api/personapi.js")
+
 Page({
 
     /**
      * 页面的初始数据
      */
-    data: {
-        CustomBar: app.globalData.CustomBar / 568 * app.globalData.sclar * 750,
-        StatusBar: app.globalData.StatusBar / 568 * app.globalData.sclar * 750,
-    },
+    data: {},
 
     getInfo(e) {
         if (e.detail.errMsg == "getUserInfo:fail auth deny") {
@@ -17,9 +15,14 @@ Page({
                 icon: "none"
             })
         } else {
-            if (!app.globalData.userInfo) {
-                app.globalData.userInfo = e.detail.userInfo
-            }
+            personapi.login().then(res => {
+                app.globalData.userInfo = res
+            }).catch(() => {
+                for (let item in e.detail.userInfo) {
+                    app.globalData.userInfo[item] = e.detail.userInfo[item]
+                }
+                personapi.newUser()
+            })
             wx.navigateTo({
                 url: '../edit/edit',
             })

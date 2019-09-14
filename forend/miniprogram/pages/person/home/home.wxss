@@ -1,7 +1,3 @@
-/* pages/personCenter/personCenter.wxss */
-
-
-
 .navigator_text {
     margin-top: 20rpx;
 }
