@@ -5,7 +5,6 @@ from person.models import Person
 from rest_framework.response import Response
 from rest_framework import status
 
-
 # Create your views here.
 class FileView(ModelViewSet):
     serializer_class = FileSerializer
@@ -17,8 +16,6 @@ class FileView(ModelViewSet):
     #     file = request.FILES['file']
     #     testTime = request.data.get('testTime')
     #     person = request.data.get('person')
-    #
-    #     print(file)
     #
     #     if person is not None and name is not None and file is not None and testTime is not None:
     #         try:
