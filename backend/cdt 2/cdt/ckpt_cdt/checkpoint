@@ -1,0 +1,2 @@
+model_checkpoint_path: "cdt.ckpt-31300"
+all_model_checkpoint_paths: "cdt.ckpt-31300"

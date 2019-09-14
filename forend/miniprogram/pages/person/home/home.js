@@ -8,24 +8,16 @@ Page({
      */
     data: {},
 
+    navHistory() {
+        wx.navigateTo({
+            url: '/pages/history/history',
+        })
+    },
+
     getInfo(e) {
-        if (e.detail.errMsg == "getUserInfo:fail auth deny") {
-            wx.showToast({
-                title: '暂未登录，无法编辑资料',
-                icon: "none"
-            })
-        } else {
-            personapi.login().then(res => {
-                app.globalData.userInfo = res
-            }).catch(() => {
-                for (let item in e.detail.userInfo) {
-                    app.globalData.userInfo[item] = e.detail.userInfo[item]
-                }
-                personapi.newUser()
-            })
-            wx.navigateTo({
-                url: '../edit/edit',
-            })
-        }
-    }
+        wx.navigateTo({
+            url: '../edit/edit',
+        })
+    },
+
 })

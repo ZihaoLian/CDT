@@ -1,7 +1,9 @@
 <view class='navigatorColor' style="height:{{CustomBar}}px;">
     <view style="height:{{CustomBar}}px;">
-        <view style='padding-top:{{StatusBar}}px;line-height:{{CustomBar-StatusBar}}px;'>
-            {{title}}
+        <view class="bg-grey padding-sm margin-xs radius"> 
+            <view style='padding-top:{{StatusBar}}px;line-height:{{CustomBar-StatusBar}}px;'>
+                {{title}}
+            </view>
         </view>
     </view>
 </view>
