@@ -141,7 +141,8 @@ Page({
     },
 
     queryDetailed: function () {
-        this.data.isUnfold = !this.data.isUnfold
-        console.log(this.data.isUnfold)
+        this.setData({
+            isUnfold: !this.data.isUnfold
+        })
     }
 })

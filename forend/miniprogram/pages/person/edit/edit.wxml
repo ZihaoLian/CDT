@@ -1,4 +1,4 @@
-<headerNoBack title="个人信息" />
+<headerWithBack title="个人信息" />
 
 <view>
     <view class='raw_camera' style="top:{{StatusBar}}px">
