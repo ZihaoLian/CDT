@@ -1,24 +1,8 @@
-/**app.wxss**/
-@import "main.wxss";
 @import "icon.wxss";
+@import "colorui.wxss";
 
-page {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 200rpx 0;
-    box-sizing: border-box;
-}
-
-.scrollPage {
-  height: 100vh;
+.cu-modal.show {
+  z-index: 99999;
 }
 
 .nav-list {
@@ -120,4 +104,32 @@ page {
 
 .text-light {
   font-weight: 300;
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  60% {
+    transform: translateY(40rpx);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  60% {
+    transform: translateY(40rpx);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }

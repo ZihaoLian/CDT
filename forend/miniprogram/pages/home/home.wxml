@@ -2,5 +2,5 @@
 
 <view class="index-container" style="top:{{CustomBar}}px; height:{{ContentHeight}}px;">
     <image src="../../image/index.png" mode="aspectFit"></image>
-    <button>点击测试</button>
+    <navigator url="/pages/test/test" open-type="switchTab">点击测试</navigator>
 </view>

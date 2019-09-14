@@ -1,61 +1,58 @@
-.navigator_text {
-    margin-top: 20rpx;
+.UCenter-bg {
+  background-image: url(https://image.weilanwl.com/color2.0/index.jpg);
+  background-size: cover;
+  height: 550rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-.row1 {
-    border-bottom: 1px solid rgb(228, 233, 238);
-}
-
-.useinfo {
-    display: flex;
-    overflow: hidden;
-    height: 120rpx;
-}
-
-.editbtn {
-    width: 230rpx;
-    line-height: 80rpx;
-    margin-left: 20rpx;
-    margin-top: 10rpx;
-    margin-bottom: 40rpx;
-    font-size: 28rpx;
-    align-items: center;
-}
-
-.userinfo-avatar {
-    width: 100rpx;
-    height: 100rpx;
+.png{
+    height: 200rpx;
+    width: 200rpx;
     border-radius: 50%;
-    margin-left: 270rpx;
-    margin-top: 10rpx;
-    display: flex;
     overflow: hidden;
 }
 
-.nickname {
-    width: 300rpx;
-    margin-left: 40rpx;
-    display: flex;
-    overflow: hidden;
-    line-height: 100rpx;
+.nickname{
+    margin-top: 30rpx;
+    font-size: 40rpx;
 }
 
-.row {
-    height: 90rpx;
-    padding: 15rpx 30rpx;
-    border-bottom: 1px solid rgb(228, 233, 238);
-    align-items: center;
-    display: flex;
+.UCenter-bg text {
+  opacity: 0.8;
 }
 
-.opinion {
-    margin: 0;
-    padding: 0;
-    font-size: 36rpx;
-    display: inline;
-    background-color: #fff;
+.UCenter-bg image {
+  width: 200rpx;
+  height: 200rpx;
 }
 
-.opinion::after {
-    border: none;
+.UCenter-bg .gif-wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+}
+
+map,.mapBox{
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+}
+
+map,.mapBox{
+  width: 750rpx;
+  height: 300rpx;
 }

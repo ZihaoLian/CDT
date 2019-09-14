@@ -1,5 +1,5 @@
 <!--pages/testDetailed/testDetailed.wxml-->
-<headerBack title="测试详情" />
+<headerWithBack title="测试详情" />
 <view class="cu-card case {{isCard?'no-card':''}}">
     <view class="cu-item shadow">
         <view class="image">

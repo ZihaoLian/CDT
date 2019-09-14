@@ -1,0 +1,74 @@
+.cu-custom {
+    display: block;
+    position: relative;
+}
+
+.cu-custom .cu-bar .content {
+    width: 100%;
+}
+
+.cu-custom .cu-bar {
+    min-height: 0px;
+    padding-right: 220rpx;
+    box-shadow: 0rpx 0rpx 0rpx;
+}
+
+.cu-bar.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1024;
+    box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.my-bg-gradual-blue {
+    background-image: linear-gradient(45deg, #5ba7d9, #4f5bbf);
+    color: rgb(255, 255, 255);
+}
+
+.cu-bar .content {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* line-height: 40px; */
+    width: calc(100% - 340rpx);
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 18px;
+    cursor: none;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cu-bar .action {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.icon-back:before {
+    content: "\e679";
+}
+.icon-back{
+    position: absolute;
+    left: 40rpx;
+    font-size: 36rpx;
+}
+
+.cu-bar .action:last-child {
+    margin-right: 30rpx;
+}
+
+.cu-bar .action:first-child {
+    margin-left: 30rpx;
+    font-size: 30rpx;
+    margin-left: -0.3em;
+    margin-right: 0.3em;
+    width: 70rpx;
+}
