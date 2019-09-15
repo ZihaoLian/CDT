@@ -1,37 +1,54 @@
 from rest_framework.viewsets import ModelViewSet
 from .serializer import FileSerializer
 from .models import File
-from person.models import Person
+from cdtTest.models import CdtTest
 from rest_framework.response import Response
 from rest_framework import status
+from public import code, msg, config
+import time
+
 
 # Create your views here.
 class FileView(ModelViewSet):
     serializer_class = FileSerializer
     queryset = File.objects.all()
 
-    # def create(self, request, *args, **kwargs):
-    #     ret = {'code': 1000, 'msg': None}
-    #     name = request.data.get('name')
-    #     file = request.FILES['file']
-    #     testTime = request.data.get('testTime')
-    #     person = request.data.get('person')
-    #
-    #     if person is not None and name is not None and file is not None and testTime is not None:
-    #         try:
-    #             person = Person.objects.get(openId=person)
-    #             if person is not None and not File.objects.get(name=name, testTime=testTime):
-    #                 File.objects.create(name=name, file=file, testTime=testTime, person=person)
-    #                 ret['msg'] = '成功获取文件'
-    #                 return Response(ret)
-    #             else:
-    #                 ret['msg'] = '获取文件失败'
-    #                 ret['code'] = 1001
-    #                 return Response(ret)
-    #         except Exception as e:
-    #             return Response(status.HTTP_500_INTERNAL_SERVER_ERROR)
-    #     else:
-    #         ret['code'] = 1002
-    #         ret['msg'] = '请检查文件名，文件，测试时间，人员是否准确'
-    #         return Response(ret)
+    def create(self, request, *args, **kwargs):
+        ret = {
+            code.FIELD_NAME: code.TEST_SUCCESS,
+            msg.FIELD_NAME: None
+        }
+
+        file_name = request.data.get('fileName')
+        file = request.FILES['file']   # 接收文件
+        test_time = request.data.get('testTime')
+        person = request.data.get('person')
+        hand_time = request.data.get('handTime')
+
+        file_url = config.BASE_URL + 'file/' + str(int(time.time())) + '_' + file.name
+        try:
+            if file_name is not None and file is not None and test_time is not None and person is not None:
+                cdt_obj = CdtTest(test_time=test_time, hand_time=hand_time, person=person)
+                cdt_obj.save()
+                print('shg')
+                # cdt_obj = CdtTest.objects.create(person=person, test_time=test_time, hand_time=hand_time)
+
+                # File.objects.create(file_name=file_name, file_url=file_url, test=cdt_obj.id)
+                # ret.update({
+                #     msg.FIELD_NAME: msg.TEST_SUCCESS
+                # })
+                # return Response(ret, status.HTTP_200_OK)
+            else:
+                ret.update({
+                    code.FIELD_NAME: code.TEST_NONE,
+                    msg.FIELD_NAME: msg.TEST_NONE
+                })
+
+        except Exception as e:
+            ret.update({
+                code.FIELD_NAME: code.TEST_FAIL,
+                msg.FIELD_NAME: msg.TEST_FAIL
+            })
+            return Response(ret, status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 

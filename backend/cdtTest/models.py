@@ -3,8 +3,8 @@ from person.models import Person
 
 
 class CdtTest(models.Model):
-    testTime = models.DateTimeField()
-    handTime = models.TimeField()
+    test_time = models.DateTimeField()
+    hand_time = models.TimeField()
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
 
     class Meta:
