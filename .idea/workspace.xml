@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6685e84-54ab-4b2b-bd28-40d66c7202c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/cdtTest/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cdtTest/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/cloudfunctions/getUserLoginNumber/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/cloudfunctions/getUserLoginNumber/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/miniprogram/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/forend/miniprogram/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/miniprogram/pages/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/forend/miniprogram/pages/history/history.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/miniprogram/pages/history/history.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/forend/miniprogram/pages/history/history.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/forend/miniprogram/pages/test/test.wxss" afterDir="false" />
-    </list>
+    <list default="true" id="b6685e84-54ab-4b2b-bd28-40d66c7202c0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/cdtTest/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="165">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -37,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/backend/cdtTest/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -49,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/backend/cdtTest/url.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -66,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/backend/backend/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#631#663#0" expanded="true" />
               </folding>
@@ -83,23 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/person/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="88" column="7" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -119,8 +96,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/file/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="120">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/file/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,10 +157,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="387" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="314" />
     <option name="y" value="23" />
-    <option name="width" value="1053" />
+    <option name="width" value="1126" />
     <option name="height" value="821" />
   </component>
   <component name="ProjectView">
@@ -203,6 +192,18 @@
               <item name="CDT" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="cdtTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CDT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDT" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CDT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDT" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -248,18 +249,18 @@
       <updated>1567078347462</updated>
       <workItem from="1567078349624" duration="5213000" />
       <workItem from="1567156373746" duration="12000" />
-      <workItem from="1567224757817" duration="4485000" />
+      <workItem from="1567224757817" duration="4677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9710000" />
+    <option name="totallyTimeSpent" value="9902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="387" y="23" width="1053" height="821" extended-state="1" />
+    <frame x="270" y="23" width="1126" height="821" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21760634" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20295203" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -376,24 +377,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/file/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/cdtTest/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -406,7 +393,7 @@
     <entry file="file://$PROJECT_DIR$/backend/backend/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#631#663#0" expanded="true" />
           </folding>
@@ -416,7 +403,7 @@
     <entry file="file://$PROJECT_DIR$/backend/cdtTest/url.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -432,11 +419,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/cdtTest/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="165">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/file/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/file/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/backend/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="88" column="7" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
         </state>
       </provider>
     </entry>
