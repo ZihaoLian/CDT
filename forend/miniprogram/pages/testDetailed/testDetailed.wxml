@@ -1,17 +1,14 @@
 <!--pages/testDetailed/testDetailed.wxml-->
 <headerWithBack title="测试详情" />
-<view class="cu-card case {{isCard?'no-card':''}}">
+<view class="cu-card case">
     <view class="cu-item shadow">
         <view class="image">
             <image src="../../image/testImg.png" mode="widthFix"></image>
             <view class="cu-tag bg-blue">复现画钟</view>
         </view>
         <view class="cu-list menu-avatar">
-            <view class="cu-item">
-                <!-- <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view> -->
+            <view class="info">
                 <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-                <!-- <open-data type="userAvatarUrl" class="cu-avatar round lg"></open-data> -->
-                <!-- <open-data type="userAvatarUrl" class="userinfo-avatar" mode="cover"></open-data> -->
                 <view class="content flex-sub">
                     <view class="text-grey">
                         <open-data type="userNickName"></open-data>
@@ -20,7 +17,7 @@
                         2019-09-12 00:00:00
                         <view class="text-gray text-sm" bindtap="queryDetailed">
                             详细结果
-                            <text class="cuIcon-unfold lg text-gray"></text>
+                            <text class="icon-unfold lg text-gray"></text>
                         </view>
                     </view>
                 </view>
@@ -31,19 +28,19 @@
     <view class="cu-list menu card-menu margin-top-x0 margin-bottom-x0 shadow-lg radius" wx:if="{{(isUnfold==true)}}">
         <view class="cu-item">
             <view class="content">
-                <text class="cuIcon-timefill text-cyan"></text>
+                <text class="icon-timefill text-cyan"></text>
                 <text class="text-grey">正确时间 : 12:30</text>
             </view>
         </view>
         <view class="cu-item">
             <view class="content" hover-class="none">
-                <text class="cuIcon-formfill text-green"></text>
+                <text class="icon-formfill text-green"></text>
                 <text class="text-grey">是否患阿尔茨海默症 : 否</text>
             </view>
         </view>
         <view class="cu-item">
             <button class="cu-btn content" open-type="feedback">
-                <text class="cuIcon-writefill text-orange"></text>
+                <text class="icon-writefill text-orange"></text>
                 <text class="text-grey">测试依据如下 ：</text>
             </button>
         </view>
@@ -51,13 +48,13 @@
             <view class="cu-list menu text-left solid-top">
                 <view class="cu-item">
                     <view class="padding">
-                        <text class="cuIcon-title text-orange padding"></text>
+                        <text class="icon-title text-orange padding"></text>
                         <text class="text-grey">画钟时间过长</text>
                     </view>
                 </view>
                 <view class="cu-item">
                     <view class="padding">
-                        <text class="cuIcon-title text-orange padding"></text>
+                        <text class="icon-title text-orange padding"></text>
                         <text class="text-grey">外圈不完整</text>
                     </view>
                 </view>

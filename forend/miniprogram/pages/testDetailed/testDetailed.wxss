@@ -1,1 +1,13 @@
 /* pages/testDetailed/testDetailed.wxss */
+.info{
+    display: flex;
+    justify-content: center;
+    margin: 30rpx;
+}
+
+.flex-sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rpx;
+}

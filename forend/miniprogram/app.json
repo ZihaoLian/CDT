@@ -1,10 +1,10 @@
 {
     "pages": [
+        "pages/testDetailed/testDetailed",
         "pages/person/home/home",
         "pages/history/history",
         "pages/home/home",
         "pages/test/test",
-        "pages/testDetailed/testDetailed",
         "pages/dialog/dialog",  
         "pages/analyse/analyse",
         "pages/descirbe/describe",
