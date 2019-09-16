@@ -1,13 +1,15 @@
 from django.db import models
 from person.models import Person
+from cdtTest.models import CdtTest
 
 
 class Image(models.Model):
-    name = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='img/%Y/%m/%d/')
-    testTime = models.DateTimeField()
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    image_name = models.CharField(max_length=50)
+    # image = models.ImageField(upload_to='img/%Y/%m/%d/')
+    image_url = models.ImageField(upload_to='img/')
+    test = models.ForeignKey(CdtTest, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'image'
-        # unique_together = ("testTime", "person", "name")  # 让testTime和person同时作为主键
+
+

@@ -98,7 +98,7 @@ Component({
 
         showDetail(e){
             wx.navigateTo({
-                url: '/pages/testDetailed/testDetailed',
+                url: '/pages/testDetail/testDetail',
             })
         }
     },

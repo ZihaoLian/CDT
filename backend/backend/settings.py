@@ -96,7 +96,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': 3306,
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '123456787a',
     }
 }
 
@@ -123,9 +123,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+# LANGUAGE_CODE = 'zh-hans'
+#
+# TIME_ZONE = 'Asia/Shanghai'
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Shanghai'
+# chinese time
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

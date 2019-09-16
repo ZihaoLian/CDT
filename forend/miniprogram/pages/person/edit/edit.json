@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-      "headerNoBack":"/components/headerNoBack/headerNoBack"
+      "headerWithBack":"/components/headerWithBack/headerWithBack"
   }
 }

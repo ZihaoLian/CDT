@@ -29,33 +29,34 @@ module.exports = {
             let hourFormat = timeUtil.timeFormat(hour)
             let minuteFormat = timeUtil.timeFormat(minute)
             let handTime = hourFormat + ':' + minuteFormat;
-            let time = timeUtil.getTime()
+            let testTime = timeUtil.getTime()
 
-            let testData = {
-                testTime: time,
-                handTime: handTime,
-                person: app.globalData.userInfo.openId,
-            }
-            app.post(`${subapi}/cdtTest/`, testData)
+            // let testData = {
+            //     testTime: time,
+            //     handTime: handTime,
+            //     person: app.globalData.userInfo.openId,
+            // }
+            // app.post(`${subapi}/cdtTest/`, testData)
 
-            this.saveFileAndImage(fileName, drawArr1, image1, 1, handTime, time)
-            this.saveFileAndImage(fileName, drawArr2, image2, 2, handTime, time)
+            this.saveFileAndImage(fileName, drawArr1, image1, 1, handTime, testTime)
+            this.saveFileAndImage(fileName, drawArr2, image2, 2, handTime, testTime)
             resolve()  // 获得resolve数据才能返回
         })
 
     },
 
-    async saveFileAndImage(fileName, drawArr, image, idx, handTime, time) {
+    async saveFileAndImage(fileName, drawArr, image, idx, handTime, testTime) {
         // 创建数据文件1
-        let filePath = `${wx.env.USER_DATA_PATH}/${fileName}_${idx}.docx`
+        let filePath = `${wx.env.USER_DATA_PATH}/${fileName}_${idx}.doc`
         fs.writeFileSync(filePath, '-1 -1 -1\n', 'utf8')
         for (var j in drawArr) {
             fs.appendFileSync(filePath, drawArr[j].x.toString() + ' ' + drawArr[j].y.toString() + ' ' + drawArr[j].t.toString() + '\n', 'utf8')
         }
 
         let data = {
-            name: fileName,
-            testTime: time,
+            fileName: fileName,
+            testTime: testTime,
+            handTime: handTime,
             person: app.globalData.userInfo.openId,
         }
 

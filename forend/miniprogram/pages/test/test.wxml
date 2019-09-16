@@ -10,7 +10,7 @@
     <canvas class="firstCanvas" style="width: 98%; height: 820rpx; margin: 7rpx; border:1rpx solid blue;" canvas-id="canvas" rgba='(255, 0, 0, 0.3)' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' disable-scroll="true" ></canvas>
   </view>
   
-   <view class="flex  p-xs margin-bottom-sm mb-sm">
+   <!-- <view class="flex  p-xs margin-bottom-sm mb-sm">
       <view class="flex-twice padding-sm margin-xs radius">
         <button class="Button_type" bindtap='start_draw'>开始</button>
       </view>
@@ -21,14 +21,14 @@
       <view class="flex-twice  padding-sm margin-xs radius">
         <button class="Button_type" bindtap="cancel_step">重画</button>
       </view>
-    </view>
+    </view> -->
 
-  <!-- <view class="flex-wrp" style="flex-direction:row">
+  <view class="flex-wrp" style="flex-direction:row">
     <button class="Button_type" bindtap='start_draw'>开始</button>
     <button wx:if="{{!secondStep}}" class="Button_type" bindtap='next_step'>下一步</button>
     <button wx:if="{{secondStep}}" class="Button_type" bindtap='finsh'>完成</button>
     <button class="Button_type" bindtap="cancel_step">重画</button>
-  </view> -->
+  </view>
   
 </view>
 

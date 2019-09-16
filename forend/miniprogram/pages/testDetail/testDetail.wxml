@@ -1,4 +1,4 @@
-<!--pages/testDetailed/testDetailed.wxml-->
+<!--pages/testDetail/testDetail.wxml-->
 <headerWithBack title="测试详情" />
 <view class="cu-card case">
     <view class="cu-item shadow">
