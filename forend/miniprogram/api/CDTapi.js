@@ -47,7 +47,7 @@ module.exports = {
 
     async saveFileAndImage(fileName, drawArr, image, idx, handTime, time) {
         // 创建数据文件1
-        let filePath = `${wx.env.USER_DATA_PATH}/${fileName}_${idx}.doc`
+        let filePath = `${wx.env.USER_DATA_PATH}/${fileName}_${idx}.docx`
         fs.writeFileSync(filePath, '-1 -1 -1\n', 'utf8')
         for (var j in drawArr) {
             fs.appendFileSync(filePath, drawArr[j].x.toString() + ' ' + drawArr[j].y.toString() + ' ' + drawArr[j].t.toString() + '\n', 'utf8')
