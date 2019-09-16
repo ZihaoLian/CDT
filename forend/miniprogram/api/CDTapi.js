@@ -46,6 +46,7 @@ module.exports = {
     },
 
     async saveFileAndImage(fileName, drawArr, image, idx, handTime, testTime) {
+        console.log(drawArr)
         // 创建数据文件1
         let filePath = `${wx.env.USER_DATA_PATH}/${fileName}_${idx}.doc`
         fs.writeFileSync(filePath, '-1 -1 -1\n', 'utf8')
@@ -57,7 +58,8 @@ module.exports = {
             fileName: fileName,
             testTime: testTime,
             handTime: handTime,
-            person: app.globalData.userInfo.openId,
+            person: 'opNJ75XxQ82mIEXpVUo3dSTMomv4',
+            //person: app.globalData.userInfo.openId,
         }
 
         await upload(`${subapi}/file/`, filePath, 'file', data)
