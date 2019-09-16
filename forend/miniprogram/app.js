@@ -9,12 +9,13 @@ App({
                 this.globalData.StatusBar = e.statusBarHeight;
                 this.globalData.CustomBar = e.statusBarHeight + 46;
                 // 用于转换成rpx
-                this.globalData.scale = e.screenWidth / 750
+                this.globalData.scale = e.screenWidth * 2 / 750
                 this.globalData.ContentHeight = e.screenHeight - this.globalData.CustomBar - 60;
+                //console.log(e.screenHeight)
             }
         })
 
-
+        // 云开发初始化
         wx.cloud.init({
             traceUser: true,
         })

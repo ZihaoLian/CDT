@@ -1,9 +1,11 @@
 /* pages/test/test.wxss */
 .navigatorColor {
-  text-align: center;
-  font-size: 45rpx;
-  background: linear-gradient(to right, #fcbb1e, #fcef1e );
-  color: #ffffff;
+    text-align: center;
+    width: 100%;
+    font-size: 45rpx;
+    background: linear-gradient(45deg, #185189, #3866a4);
+    color: #fff;
+    z-index: 1;
 }
 
 .navigator_text{
@@ -42,7 +44,7 @@
   line-height: 80rpx;
   margin: 20rpx auto;
   font-size: 28rpx;
-  background: linear-gradient(to right, #fcbb1e, #fcef1e );
+  background: linear-gradient(45deg, #185189, #3866a4);
   color: #ffffff
 }
 

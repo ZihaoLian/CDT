@@ -1,11 +1,13 @@
 {
     "pages": [
         "pages/home/home",
+        "pages/testDetail/testDetail",
         "pages/person/home/home",
         "pages/history/history",
+        
         "pages/test/test",
+        
         "pages/analyse/analyse",
-        "pages/descirbe/describe",
         "pages/setting/setting",
         "pages/manual/manual"
     ],

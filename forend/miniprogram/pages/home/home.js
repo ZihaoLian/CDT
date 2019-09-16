@@ -1,5 +1,7 @@
 // pages/home/home.js
 const app = getApp();
+const personapi = require("../../api/personapi.js")
+
 Page({
 
     /**
@@ -13,21 +15,17 @@ Page({
         ContentHeight: app.globalData.ContentHeight
     },
 
-    query_jiaocheng: function() {
-        wx.navigateTo({
-            url: '../manual/manual',
-        })
+    onLoad() {
+        wx.cloud.callFunction({
+            name: "login"
+        }).then(res => {
+            app.globalData.userInfo.openId = res.result.openid
+            return personapi.login()
+        }).then(res => app.globalData.userInfo = res,
+            () => {
+                return personapi.newUser()
+            }).then(res => app.globalData.userInfo = res)
     },
 
-    toDescribe: function() {
-        wx.switchTab({
-            url: '../test/test',
-        })
-    },
 
-    setting: function() {
-        wx.navigateTo({
-            url: '../setting/setting',
-        })
-    }
 })

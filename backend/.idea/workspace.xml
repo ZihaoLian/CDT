@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30e63eb2-1e59-4bb2-a572-be65b5162e3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/msg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._area_classification.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._cdt_feature.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._cdt_feature_creator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._cdt_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._digit_classification.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._explanation_creator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._hand.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._kmeans.model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._rf.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._storke_segmentation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._stroke_classification.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._svm_train_1_model.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._train1_model.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/._样例.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/ckpt_cdt/._cdt.ckpt-31300.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/ckpt_cdt/._cdt.ckpt-31300.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/ckpt_cdt/._cdt.ckpt-31300.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdt 2/__MACOSX/cdt/ckpt_cdt/._checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cdtTest/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/cdtTest/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/cdtTest/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdtTest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cdtTest/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/file/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/file/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/image/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/image/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/423f1568446512367_1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/423f1568446512367_2.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/48211568443160600_1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/48211568443160600_2.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/55411568447677925_1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/55411568447677925_2.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/75651568446739262_1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/75651568446739262_2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/7d201568447664045_1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/7d201568447664045_2.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/812f1568447635991_1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/812f1568447635991_2.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/86241568447653589_1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/86241568447653589_2.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/959f1568447702039_1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/file/2019/09/14/959f1568447702039_2.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.12FZJHj5PHTifee0108b7925a_kex4T6D.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.8PJsPKblhxIMf5f11a20d7157_mrvYNth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.8W97YsnUzf9Xa12f9683ddb24_4okS4r9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.8WQSEgi91ahG0a784d3bd346f_IyTkGgA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.Dtzcb4xFS8Ewff7c1199fa909_rCNjXcf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.KtZAhVs9d7CU6b10bdcac4ac5_Df6mb0Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.O8ZjJDZfl3jk8ba132d1318d3_b3l5x0z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.OLHsyMfmcyjB20274736cbd40_dMrAW2d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.RxO6fOmFBBNGe9862528add59_k6NzqRU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.TZIAL7S1JU39fc0abb569e96e_3OWyQe8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.U9ifvMDTy89u02f73156ce81e_h6xH7N7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.UgOUVjYQjIVT62ee6305c1b11_65odUvX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.Zj5EgsKdRv624a775a7345eaf_gkYPMgW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.eqlxXCst6UaR77d0c70cf3d42_BY2666Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.mf6hdpgXALvY743e1f8273d70_GibCsdE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.o7HhBnkle2Kgc897c79845531_VAdsJJl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.rEUO4WA1thLA70e4a5229374e_KQDsqCy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.sNZL3NaKHV3g672bf057d2ad2_LlR7usL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.vsCDFeXY34rS394639192f4cc_55w7L1X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/img/2019/09/14/wx698247d978d5ab48.o6zAJs5-V9VDCPGKRQF7p4CiNqC8.yFitvFxl5FvW8260c5b1f176c_t79OEye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/person/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/pages/test/test.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/pages/test/test.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forend/miniprogram/utils/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/../forend/miniprogram/utils/time.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1QVGAnnquQN3ZVtezFjFzMBYos5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../zcyp-django" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="backend" type="Python.DjangoServer" factoryName="Django server">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="backend.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30e63eb2-1e59-4bb2-a572-be65b5162e3c" name="Default Changelist" comment="" />
+      <created>1567848208663</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567848208663</updated>
+      <workItem from="1567848234222" duration="1722000" />
+      <workItem from="1567912203471" duration="261000" />
+      <workItem from="1567912534232" duration="15000" />
+      <workItem from="1568007995445" duration="712000" />
+      <workItem from="1568341943529" duration="19628000" />
+      <workItem from="1568431240953" duration="41687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

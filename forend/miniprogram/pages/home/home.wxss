@@ -1,5 +1,5 @@
 page{
-    background-color: #021031;
+    background-color: #04193E;
 }
 
 .index-container {
@@ -14,10 +14,14 @@ page{
     margin: 40rpx auto;
 }
 
-.index-container>button{
+.index-container>navigator{
     width: 80%;
     border-radius: 45rpx; 
     background-color: #1fccd7;
     color: #000;
     font-size: 41rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    margin: 0 auto;
 }
