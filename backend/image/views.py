@@ -68,8 +68,10 @@ class ImageView(ModelViewSet):
 
         try:
             if image_name is not None and image is not None and test_time is not None and person is not None:
+                
                 cdt_obj = CdtTest(test_time=test_time, hand_time=hand_time, person_id=person)
                 cdt_obj.save()
+
                 image_obj = Image(image=image)
                 image_obj.image_name = image_name
                 image_obj.test_id = cdt_obj.id
@@ -86,6 +88,7 @@ class ImageView(ModelViewSet):
                 })
                 return Response(ret, status.HTTP_200_OK)
         except Exception as e:
+            print(str(e))
             ret.update({
                 code.FIELD_NAME: code.TEST_FAIL,
                 msg.FIELD_NAME: msg.TEST_FAIL

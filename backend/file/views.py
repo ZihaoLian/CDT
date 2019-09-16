@@ -49,6 +49,7 @@ class FileView(ModelViewSet):
                 })
 
         except Exception as e:
+            print("..........................")
             ret.update({
                 code.FIELD_NAME: code.TEST_FAIL,
                 msg.FIELD_NAME: msg.TEST_FAIL

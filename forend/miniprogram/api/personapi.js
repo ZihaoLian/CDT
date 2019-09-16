@@ -8,7 +8,9 @@ module.exports = {
     },
 
     newUser() {
-        return app.post(`${subapi}/people/`, app.globalData.userInfo.openId)
+        return app.post(`${subapi}/people/`, {
+            openId: app.globalData.userInfo.openId
+        })
     },
 
     updateUser(data) {
