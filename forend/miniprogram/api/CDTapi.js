@@ -46,9 +46,21 @@ module.exports = {
     },
 
     async saveFileAndImage(fileName, drawArr, image, idx, handTime, testTime) {
-        console.log(drawArr)
+        // 处理y使得后端图片倒转
+        let y = []
+        for (let i in drawArr){
+            y.push(drawArr[i].y)
+        }
+        let max = Math.max.apply(null, y)
+
+        for (let k in drawArr){
+            if(drawArr[k].y != -1){
+                drawArr[k].y = Math.abs(drawArr[k].y - max)
+            }
+        }
+
         // 创建数据文件1
-        let filePath = `${wx.env.USER_DATA_PATH}/${fileName}_${idx}.doc`
+        let filePath = `${wx.env.USER_DATA_PATH}/${fileName}_${idx}.docx`
         fs.writeFileSync(filePath, '-1 -1 -1\n', 'utf8')
         for (var j in drawArr) {
             fs.appendFileSync(filePath, drawArr[j].x.toString() + ' ' + drawArr[j].y.toString() + ' ' + drawArr[j].t.toString() + '\n', 'utf8')
