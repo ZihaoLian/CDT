@@ -22,7 +22,6 @@ class ImageView(ModelViewSet):
         }
         try:
             path = kwargs.get('path', None)
-
             # (1) check if we get the path
             if not path:
                 ret.update({
@@ -33,6 +32,7 @@ class ImageView(ModelViewSet):
 
             # (2) check file exist
             path = os.path.join(config.BASE_URL, path)
+            print(path)
             if not os.path.exists(path):
                 ret.update({
                     code.FIELD_NAME: code.IMAGE_NOT_EXIST,

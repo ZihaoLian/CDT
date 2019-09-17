@@ -70,6 +70,7 @@ class CdtModel:
         center=count_center(strokes)
         strokes_indexs=get_strokes_index(strokes)
         bounding_box=np.zeros((strokes_indexs.shape[0],6))
+        #print(strokes_indexs)
         for i in range(strokes_indexs.shape[0]):
             bounding_box[i]=get_bounding_box(strokes[strokes_indexs[i,0]:strokes_indexs[i,1],:])
         #从笔画中分类出外圈笔画
@@ -271,8 +272,7 @@ class CdtModel:
                     hour_digit_angles[i]=get_polar_coordinates(digit_center,hand_center)[1]
             else:
                 hour_digit_angles=[0]
-            if(minute>=10):
-                minute-=10
+            minute=int((minute/5)%10)
             if len(digit_info[minute])>0:
                 minute_digit_angles=np.zeros(len(digit_info[minute]))
                 for i in range(len(digit_info[minute])):
@@ -338,6 +338,7 @@ class CdtModel:
         self.draw_result_picture(strokes,strokes_indexs,internal_indexs,digit_area_indexs,edge_ellipse,buffer)
         return clock_feature[:cnt],tol_digit_num
 
+    # 展示测试结果图片
     def draw_result_picture(self,strokes,strokes_indexs,internal_indexs,digit_area_indexs,edge_ellipse,buffer):
         plt.cla()
         ax = plt.gca()
@@ -361,8 +362,8 @@ class CdtModel:
         ellipse.set_color("teal")
         ellipse.set_fill(False)
         ax.add_artist(ellipse)
-        #plt.savefig(save_path)
-        #plt.show()
+        # plt.savefig(save_path)
+        plt.show()
         fig = plt.gcf()
         fig.set_size_inches(4, 4)  # 设置图片的尺寸为400 * 400
         fig.savefig(buffer, format="jpg")
@@ -409,7 +410,7 @@ class CdtModel:
             #数字的数目正好或是缺失则采用全部现有数字
             if digit_size_difference[i]>=0:
                 continue
-            #数字多则取到偏离数字应在角度最小的
+            #数字多则取到偏离数字应该在的空间分布角度最小的
             temp_digit_difference_angles=np.zeros((len(digit_info[i])))
             for j in range(len(digit_info[i])):
                 temp_digit_difference_angles[j]=min([math.fabs(digit_info[i][j][3]-x) for x in digit_angles[i]])
@@ -604,7 +605,6 @@ class CdtModel:
         lack_digit=[i for i,x in enumerate(digit_size_difference) if x>0]
         adequate_digit=[i for i,x in enumerate(digit_size_difference) if x==0]
         return digit_size_difference,adequate_digit,lack_digit
-
 
 
     def digit_label_to_list(self,strokes,digit_indexs,area_indexs,digit_label,center):

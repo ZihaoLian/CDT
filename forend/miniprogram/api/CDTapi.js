@@ -15,6 +15,7 @@ function upload(url, filePath, name, data) {
             //do something
         }
     })
+    console.log("调用了")
 }
 
 module.exports = {
@@ -70,6 +71,7 @@ module.exports = {
             testTime: testTime,
             handTime: handTime,
             person: app.globalData.userInfo.openId,
+            // person: 'opNJ75XxQ82mIEXpVUo3dSTMomv4'
         }
 
         await upload(`${subapi}/file/`, filePath, 'file', data)
