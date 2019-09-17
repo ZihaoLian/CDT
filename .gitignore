@@ -20,9 +20,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-*.png
-*.doc
-*.docx
-*.pyc
-*.csv
-0001_initial.py
+migrations/
+__pycache__/
+media/
