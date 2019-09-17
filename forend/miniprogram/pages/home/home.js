@@ -23,6 +23,17 @@ Page({
             return personapi.login()
         }).then(res => app.globalData.userInfo = res,
             () => {
+                wx.showModal({
+                    title: '温馨提示',
+                    content: '是否需要查看教程，以帮助您快速上手我们的小程序',
+                    success(res){
+                        if(res.confirm){
+                            wx.redirectTo({
+                                url: '/pages/manual/manual',
+                            })
+                        }
+                    }
+                })
                 return personapi.newUser()
             }).then(res => app.globalData.userInfo = res)
     },

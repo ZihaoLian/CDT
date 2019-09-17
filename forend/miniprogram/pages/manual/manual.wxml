@@ -1,6 +1,6 @@
 <!--pages/manual/manual.wxml-->
 
-<swiper class="swiper" indicatorDots="true" current="{{index}}" autoplay="false" duration="500" bindchange='bindChange'>
+<swiper class="swiper" indicatorDots="true" autoplay="1000" current="{{index}}" bindchange='bindChange'>
   <block wx:for="{{manualImg}}" wx:for-index="index">
     <swiper-item>
         <image src="{{item.url}}" class="swiperImage" mode="scaleToFill" />
