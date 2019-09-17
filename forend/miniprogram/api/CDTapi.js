@@ -1,10 +1,3 @@
-/*
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-09-17 00:56:58
- * @LastEditTime: 2019-09-17 00:58:02
- * @LastEditors: Please set LastEditors
- */
 let timeUtil = require('../utils/time.js')
 const fs = wx.getFileSystemManager(); //获取文件管理系统
 const app = getApp()
@@ -22,6 +15,7 @@ function upload(url, filePath, name, data) {
             //do something
         }
     })
+    console.log("调用了")
 }
 
 module.exports = {
@@ -77,6 +71,7 @@ module.exports = {
             testTime: testTime,
             handTime: handTime,
             person: app.globalData.userInfo.openId,
+            // person: 'opNJ75XxQ82mIEXpVUo3dSTMomv4'
         }
 
         await upload(`${subapi}/file/`, filePath, 'file', data)

@@ -24,3 +24,5 @@ yarn-error.log*
 *.doc
 *.docx
 *.pyc
+*.csv
+0001_initial.py
