@@ -65,7 +65,6 @@ class CdtTestView(ModelViewSet):
                     })
                     return Response(ret, status.HTTP_204_NO_CONTENT)
             except Exception as e:
-                print(e)
                 ret.update({
                     code.FIELD_NAME: code.DETAIL_FAIL,
                     msg.FIELD_NAME: msg.DETAIL_FAIL

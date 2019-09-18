@@ -128,17 +128,9 @@
 }
 
 .single {
-    width: 480rpx;
+    width: 100%;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-.multiple {
-    display: block;
-    width: 480rpx;
-    word-break: break-all;
-    white-space: pre-wrap;
-    line-height: 35rpx;
 }

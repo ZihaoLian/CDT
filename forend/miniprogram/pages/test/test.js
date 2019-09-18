@@ -203,8 +203,42 @@ Page({
 
     //存储数据
     store() {
-        CDTapi.storeClock(this.data.hour, this.data.minute, this.data.fileName, this.data.drawArr1, this.data.drawArr2, this.data.image1, this.data.image2).then(() => {
+        let that = this
+        CDTapi.storeClock(this.data.hour, this.data.minute, this.data.fileName, this.data.drawArr1, this.data.drawArr2, this.data.image1, this.data.image2).then(res => {
             wx.hideLoading()
+            console.log(JSON.parse(res.data))
+            if (!JSON.parse(res.data).result) {
+                wx.showModal({
+                    title: '测试结果',
+                    content: '恭喜您，身体状况良好，请继续保持',
+                    showCancel: false,
+                    confirmText: "我知道了",
+                    success(res) {
+                        if (res.confirm) {
+                            wx.showModal({
+                                title: '提示',
+                                content: '你已经完成画钟测试了，是否再测试一次',
+                                cancelColor: "#000000",
+                                confirmColor: "#000000",
+                                success(res) {
+                                    if (res.confirm) {
+                                        that.setData({
+                                            is_begin_draw: false, //防止下次进来后就直接进行画钟
+                                            step_tip: "请点击开始按钮进行测试",
+                                            secondStep: false
+                                        })
+                                        that.clear()
+                                    } else if (res.cancel) {
+                                        wx.switchTab({
+                                            url: '../home/home',
+                                        })
+                                    }
+                                }
+                            })
+                        }
+                    }
+                })
+            }
         })
     },
 
@@ -224,26 +258,7 @@ Page({
                 that.data[which] = res.tempFilePath
                 if (which == "image2") {
                     that.store()
-                    wx.showModal({
-                        title: '提示',
-                        content: '你已经完成画钟测试了，是否再测试一次',
-                        cancelColor: "#000000",
-                        confirmColor: "#000000",
-                        success(res) {
-                            if (res.confirm) {
-                                that.setData({
-                                    is_begin_draw: false, //防止下次进来后就直接进行画钟
-                                    step_tip: "请点击开始按钮进行测试",
-                                    secondStep: false
-                                })
-                                that.clear()
-                            } else if (res.cancel) {
-                                wx.switchTab({
-                                    url: '../home/home',
-                                })
-                            }
-                        }
-                    })
+
                 }
             }
         })

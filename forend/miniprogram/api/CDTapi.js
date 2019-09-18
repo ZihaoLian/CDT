@@ -4,18 +4,18 @@ const app = getApp()
 const subapi = `${app.globalData.host}/api/v1`
 
 function upload(url, filePath, name, data) {
-    wx.uploadFile({
-        url: url, //后台端口
-        filePath: filePath, // 要发送的资源路径
-        name: name, // 后端通过这个名字来获取前端发过去的资源文件
-        method: 'POST',
-        formData: data, // 额外的要发送给后端的表单数据
-        success(res) {
-            console.log(res)
-            //do something
-        }
+    return new Promise(resolve => {
+        wx.uploadFile({
+            url: url, //后台端口
+            filePath: filePath, // 要发送的资源路径
+            name: name, // 后端通过这个名字来获取前端发过去的资源文件
+            method: 'POST',
+            formData: data, // 额外的要发送给后端的表单数据
+            success(res) {
+                resolve(res)
+            }
+        })
     })
-    console.log("调用了")
 }
 
 module.exports = {
@@ -40,8 +40,9 @@ module.exports = {
             // app.post(`${subapi}/cdtTest/`, testData)
 
             this.saveFileAndImage(fileName, drawArr1, image1, 1, handTime, testTime)
-            this.saveFileAndImage(fileName, drawArr2, image2, 2, handTime, testTime)
-            resolve() // 获得resolve数据才能返回
+            this.saveFileAndImage(fileName, drawArr2, image2, 2, handTime, testTime).then(res => {
+                resolve(res) // 获得resolve数据才能返回
+            })
         })
 
     },
@@ -71,12 +72,17 @@ module.exports = {
             testTime: testTime,
             handTime: handTime,
             idx: idx,
-            //person: app.globalData.userInfo.openId,
-            person: 'opNJ75XxQ82mIEXpVUo3dSTMomv4'
+            person: app.globalData.userInfo.openId,
+            // person: 'opNJ75XxQ82mIEXpVUo3dSTMomv4'
         }
 
         await upload(`${subapi}/image/`, image, 'image', data)
-        await upload(`${subapi}/file/`, filePath, 'file', data)
-        
+        res = await upload(`${subapi}/file/`, filePath, 'file', data)
+        return res
+    },
+
+    // 获取最近测试结果
+    getHistory() {
+        return app.get(`${subapi}/cdtTest/${app.globalData.userInfo.openId}`)
     }
 }
