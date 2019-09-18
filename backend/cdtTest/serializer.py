@@ -4,6 +4,8 @@ from rest_framework import serializers
 
 class CdtTestSerializer(serializers.Serializer):
     class Meta:
+        # model = CdtTest
+        # fields = ("test_time", "hand_time", "person")
         test_time = serializers.SerializerMethodField()
         hand_time = serializers.SerializerMethodField()
         person = serializers.CharField()

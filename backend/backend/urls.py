@@ -15,8 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
-from django.conf import settings
 
 
 urlpatterns = [
@@ -24,5 +22,5 @@ urlpatterns = [
     path('api/v1/person/', include('person.urls')),
     path('api/v1/cdtTest/', include('cdtTest.url')),
     path('api/v1/file/', include('file.url')),
-    path('', include('image.url')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', include('image.url'))
+]

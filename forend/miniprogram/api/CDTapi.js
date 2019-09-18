@@ -70,11 +70,13 @@ module.exports = {
             fileName: fileName,
             testTime: testTime,
             handTime: handTime,
-            person: app.globalData.userInfo.openId,
-            // person: 'opNJ75XxQ82mIEXpVUo3dSTMomv4'
+            idx: idx,
+            //person: app.globalData.userInfo.openId,
+            person: 'opNJ75XxQ82mIEXpVUo3dSTMomv4'
         }
 
-        await upload(`${subapi}/file/`, filePath, 'file', data)
         await upload(`${subapi}/image/`, image, 'image', data)
+        await upload(`${subapi}/file/`, filePath, 'file', data)
+        
     }
 }

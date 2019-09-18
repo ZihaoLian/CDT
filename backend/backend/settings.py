@@ -140,7 +140,3 @@ CORS_ALLOW_CREDENTIALS = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-
-# STATICFILES_DIRS = (
-#     os.path.join(os.path.dirname(__file__), 'static').replace('\\', '/')
-# )

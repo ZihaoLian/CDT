@@ -1,7 +1,7 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views import CdtTestView
 
 
 urlpatterns = [
-    path('', CdtTestView.as_view({'get': 'list'})),
+    re_path('(?P<openId>.*)$', CdtTestView.as_view({'get': 'list'})),
 ]
