@@ -1,12 +1,11 @@
 from rest_framework.viewsets import ModelViewSet
-from .serializer import CdtTestSerializer
-from django.core import serializers
-from .models import CdtTest
+from rest_framework import status
+from rest_framework.response import Response
 from public import code, msg
 from image.models import Image
 from image.serializer import ImageSerializer
-from rest_framework import status
-from rest_framework.response import Response
+from .serializer import CdtTestSerializer
+from .models import CdtTest
 
 
 # Create your views here.
@@ -64,7 +63,7 @@ class CdtTestView(ModelViewSet):
                         msg.FIELD_NAME: msg.DETAIL_NO_IMAGE
                     })
                     return Response(ret, status.HTTP_204_NO_CONTENT)
-            except Exception as e:
+            except Exception:
                 ret.update({
                     code.FIELD_NAME: code.DETAIL_FAIL,
                     msg.FIELD_NAME: msg.DETAIL_FAIL
@@ -76,13 +75,4 @@ class CdtTestView(ModelViewSet):
                 msg.FIELD_NAME: msg.DETAIL_NO_PERSON
             })
             return Response(ret, status.HTTP_403_FORBIDDEN)
-
-
-
-
-
-
-
-
-
-
+            
