@@ -3,7 +3,11 @@
 <view class="cu-card case">
     <view class="cu-item shadow">
         <view class="image">
-            <image src="../../image/testImg.png" mode="widthFix"></image>
+            <image src="{{data.first.image_url}}" mode="widthFix"></image>
+            <view class="cu-tag bg-blue">任务画钟</view>
+        </view>
+        <view class="image">
+            <image src="{{data.copy.image_url}}" mode="widthFix"></image>
             <view class="cu-tag bg-blue">复现画钟</view>
         </view>
         <view class="cu-list menu-avatar">
@@ -29,7 +33,7 @@
         <view class="cu-item">
             <view class="content">
                 <text class="icon-timefill text-cyan"></text>
-                <text class="text-grey">正确时间 : 12:30</text>
+                <text class="text-grey">正确指针时间 : 12:30</text>
             </view>
         </view>
         <view class="cu-item">

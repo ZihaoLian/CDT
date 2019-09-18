@@ -97,8 +97,9 @@ Component({
         },
 
         showDetail(e){
+            data = JSON.stringify(this.properties.historyList[e.currentTarget.dataset.index])
             wx.navigateTo({
-                url: '/pages/testDetail/testDetail',
+                url: `/pages/testDetail/testDetail?data=${data}`,
             })
         }
     },

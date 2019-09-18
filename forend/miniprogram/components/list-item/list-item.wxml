@@ -2,10 +2,10 @@
 <view class="touch-item {{isTouchMove[index] ? 'touch-move-active' : ''}}" bindtap="showDetail" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" wx:for="{{historyList}}">
     <view class='mess'>
         <view class="cu-item" hover-class='cur' hover-stay-time='100' hover-hover-start-time='0'>
-            <image class="cu-avatar radius lg" mode='aspectFit' src='{{item.url}}'></image>
+            <image class="cu-avatar radius lg" mode='aspectFit' src='{{item.copy.image_url}}'></image>
             <view class='content'>
                 <view class='text-grey single'>测试时间：{{item.testTime}}</view>
-                <view class='text-gray text-sm multiple'>点击查看详情~</view>
+                <view class='text-gray text-sm'>点击查看详情~</view>
             </view>
         </view>
     </view>
