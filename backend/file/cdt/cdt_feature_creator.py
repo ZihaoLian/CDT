@@ -27,6 +27,8 @@ from cdt_util import INF
 from cdt_util import count_distance
 from cdt_util import dcmp
 from cdt_util import overlap
+
+
 class CdtModel:
     def __init__(self):
         #钟表每个数字的个数，例如 0：1个 ，1：5个
@@ -362,6 +364,7 @@ class CdtModel:
         ellipse.set_color("teal")
         ellipse.set_fill(False)
         ax.add_artist(ellipse)
+        plt.savefig('detect_img.jpg')
         # plt.savefig(save_path)
         plt.show()
         fig = plt.gcf()

@@ -29,7 +29,7 @@
         <view class="cu-item">
             <view class="content">
                 <text class="icon-timefill text-cyan"></text>
-                <text class="text-grey">正确时间 : 12:30</text>
+                <text class="text-grey">正确指针时间 : 12:30</text>
             </view>
         </view>
         <view class="cu-item">

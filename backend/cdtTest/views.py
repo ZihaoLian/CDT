@@ -1,8 +1,12 @@
 from rest_framework.viewsets import ModelViewSet
 from .serializer import CdtTestSerializer
+from django.core import serializers
 from .models import CdtTest
 from public import code, msg
 from image.models import Image
+from image.serializer import ImageSerializer
+from rest_framework import status
+from rest_framework.response import Response
 
 
 # Create your views here.
@@ -12,36 +16,67 @@ class CdtTestView(ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         ret = {
-            code.FIELD_NAME: code.TEST_SUCCESS,
+            code.FIELD_NAME: code.DETAIL_SUCCESS,
             msg.FIELD_NAME: None
         }
-        # test_time = models.DateTimeField()
-        # hand_time = models.TimeField()
-        # person = models.ForeignKey(Person, on_delete=models.CASCADE)
-        #
+
+        detail_list = []
+
+        person = kwargs.get('openId', None)
         # person = request.data.get('person')
-        # test_list = CdtTest.objects.filter(person=person)
-        # test_list = CdtTestSerializer(test_list).data
-        # for item in test_list:
-        #     print()
+        if person is not None:
+            try:
+                cdt_test_list = CdtTest.objects.filter(person=person)
+                if cdt_test_list.exists():
+                    # cdt_test_ser = CdtTestSerializer(instance=cdt_test_list, many=True).data
+                    for item in cdt_test_list:
+                        test_dict = {}
+                        try:
+                            image_list = Image.objects.filter(test_id=item.id)
+                            image_ser = ImageSerializer(instance=image_list, many=True).data
+                            for image in image_ser:
+                                if image['image_name'] == 'copy':
+                                    test_dict['copy'] = image
+                                else:
+                                    test_dict['first'] = image
 
+                            test_dict['testTime'] = item.test_time
+                            test_dict['handTime'] = item.hand_time
+                            detail_list.append(test_dict)
+                            ret.update({
+                                'detail_list': detail_list
+                            })
 
+                        except Image.DoesNotExist:
+                            ret.update({
+                                code.FIELD_NAME: code.DETAIL_NO_IMAGE,
+                                msg.FIELD_NAME: msg.DETAIL_NO_IMAGE
+                            })
+                            return Response(ret, status.HTTP_404_NOT_FOUND)
 
-    # def create(self, request, *args, **kwargs):
-    #     ret = dict(code=code.TEST_SUCCESS)
-    #     test_time = request.data.get('testTime')
-    #     hand_time = request.data.get('handTime')
-    #     person = request.data.get('handTime')
-    #
-    #     file_url = models.FileField(upload_to='file/')
-    #     test = models.ForeignKey(CdtTest, on_delete=models.CASCADE)
-    #
-    #     file_name = str(int(time.time())) + '_' + file.name
-    #
-    #     if person is not None and test_time is not None and person is not None:
-    #         test_obj = CdtTest.objects.create(test_time=test_time, hand_time=hand_time, person=person)
-    #         file_obj = File.objects.create(file_url=(config.BASE_URL + 'file/' + ))
-    #         print(test_obj.id)
+                    ret.update({
+                        msg.FIELD_NAME: msg.DETAIL_SUCCESS
+                    })
+                    return Response(ret)
+                else:
+                    ret.update({
+                        code.FIELD_NAME: code.DETAIL_NO_IMAGE,
+                        msg.FIELD_NAME: msg.DETAIL_NO_IMAGE
+                    })
+                    return Response(ret, status.HTTP_204_NO_CONTENT)
+            except Exception as e:
+                print(e)
+                ret.update({
+                    code.FIELD_NAME: code.DETAIL_FAIL,
+                    msg.FIELD_NAME: msg.DETAIL_FAIL
+                })
+
+        else:
+            ret.update({
+                code.FIELD_NAME: code.DETAIL_NO_PERSON,
+                msg.FIELD_NAME: msg.DETAIL_NO_PERSON
+            })
+            return Response(ret, status.HTTP_403_FORBIDDEN)
 
 
 

@@ -6,6 +6,7 @@ class CdtTest(models.Model):
     test_time = models.DateTimeField()
     hand_time = models.TimeField()
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    result = models.BooleanField(default=0)
 
     class Meta:
         # unique_together = ("testTime", "person")  # 让testTime和person同时作为主键

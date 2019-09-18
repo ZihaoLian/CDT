@@ -13,3 +13,10 @@ IMAGE_FAIL = '获取图片失败'
 IMAGE_PATH_NOT_FOUND = '请确保上传路径'
 IMAGE_NOT_EXIST = '图片不存在'
 IMAGE_UNEXPECTED_ERROR = '未知错误'
+
+# for detail
+DETAIL_SUCCESS = '获取测试详情列表成功'
+DETAIL_FAIL = '获取测试详情列表失败'
+DETAIL_NO_PERSON = '请携带用户openId作为参数'
+DETAIL_NO_ITEMS = '没有测试数据'
+DETAIL_NO_IMAGE = '没有画钟图片'
