@@ -49,7 +49,6 @@ def count_stroke_length(strokes):
             tol_length+=count_distance(cur[0],cur[1],strokes[i,0],strokes[i,1])
         cur=strokes[i]
     return tol_length
-
 #计算两个序列之间的最短距离,O(nlogn)
 def get_cloest_distance(array1,array2):
     len1=array1.shape[0]
@@ -58,7 +57,6 @@ def get_cloest_distance(array1,array2):
     array[len1:,2]=1
     array=array[np.lexsort([array[:,1],array[:,0]]),:]
     return count_cloest_distance(array)
-    
 def count_cloest_distance(array):
     len=array.shape[0]
 #    print(len)
@@ -98,7 +96,7 @@ def draw_by_strokes(strokes,digit_indexs,area_list):
 def polygon_area(a):
     x=a[:,0]
     y=a[:,1]
-    correction = x[-1] * y[0] - y[-1] * x[0]
+    correction = x[-1] * y[0] - y[-1]* x[0]
     main_area = np.dot(x[:-1], y[1:]) - np.dot(y[:-1], x[1:])
     return 0.5*np.abs(main_area + correction)
 

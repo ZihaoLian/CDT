@@ -8,7 +8,7 @@ from public import code, msg, config
 from image.models import Image
 from cdtTest.serializer import CdtTestSerializer
 from image.serializer import ImageSerializer
-
+from file.cdt.test import CDT
 
 
 # Create your views here.
@@ -17,6 +17,7 @@ class FileView(ModelViewSet):
     queryset = File.objects.all()
 
     def create(self, request, *args, **kwargs):
+        CDT.detect("../cdt/73471568716181723_1.csv", "../cdt/73471568716181723_2.csv", 3, 25)
         ret = {
             code.FIELD_NAME: code.TEST_SUCCESS,
             msg.FIELD_NAME: None
@@ -75,7 +76,6 @@ class FileView(ModelViewSet):
             #         img.save()
             # except Exception as e:
             #     print(e)
-
 
             return Response(ret, status.HTTP_200_OK)
         else:

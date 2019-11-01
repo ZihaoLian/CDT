@@ -1,12 +1,16 @@
 import numpy as np
 import lime.lime_tabular
-from cdt_util import dcmp
+from file.cdt.cdt_util import dcmp
+from sklearn import preprocessing
 import lime
+
 
 class Explanation:
     def __init__(self):
         #如果要换其他模型，将下面的改成该模型实际训练用的数据
-        cdt_feature=np.loadtxt("./cdt_feature.csv",delimiter=",",skiprows=0)
+        self.min_max_scaler = preprocessing.MinMaxScaler()
+        cdt_feature=np.loadtxt("./rf_feature.csv",delimiter=",",skiprows=0)
+        cdt_feature = self.min_max_scaler.fit_transform(cdt_feature[:, :408])  # 最小最大归一化
         self.explainer = lime.lime_tabular.LimeTabularExplainer(cdt_feature[:,:408], feature_names=[i for i in range(408)], class_names=["0","1"], discretize_continuous=True)
         self.level_explanation=["个别","部分","大部分"]
         self.negative_explanation=[["数字不规整","数字绘画时间过长或过短","数字空间分布有误","数字重复","数字缺失","没有首先画了数字12，3，6，9"],
@@ -62,7 +66,9 @@ class Explanation:
             13,14,10,10,10,43,41,42]
 
     def explain(self,model,feature,explanation_max_num=40):
-        feature=feature.reshape(408)
+        feature = feature.reshape(-1, 408)
+        feature = self.min_max_scaler.transform(feature)  # 将相同的缩放应用到测试数据中
+        feature = feature.reshape(408)
         #该函数的feature必须是一维的，有毒
         exp = self.explainer.explain_instance(feature,model.predict_proba, num_features=explanation_max_num,top_labels=1)
         exp_map=exp.as_map()

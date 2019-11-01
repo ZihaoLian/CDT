@@ -1,17 +1,17 @@
 import math
 import numpy as np
-from cdt_util import count_distance
-from cdt_util import count_stroke_length
+from file.cdt.cdt_util import count_distance
+from file.cdt.cdt_util import count_stroke_length
 import tensorflow as tf
 import cv2
 from sklearn.utils.extmath import softmax
 
+
 class DigitDetector:
-
     def __init__(self):
-        self.graph,self.sess=self.loadModel('./ckpt_cdt/cdt.ckpt-31300.meta','./ckpt_cdt/')
+        self.graph,self.sess=self.loadModel('file/cdt/cdt.ckpt-31300.meta', './')
 
-    #等弧长8点
+    # 等弧长8点
     def make_feature(self,strokes):
         #print("strokes",strokes)
         tol_length=count_stroke_length(strokes)

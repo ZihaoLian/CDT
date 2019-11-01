@@ -3,14 +3,14 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 from sklearn.externals import joblib
-from cdt_util import count_distance
-from cdt_util import get_cloest_distance
+from file.cdt.cdt_util import count_distance
+from file.cdt.cdt_util import get_cloest_distance
 
 #将构成同一元素的笔画分成一个区域
 class AdaboostModel:
 
     def __init__(self):
-        self.model= joblib.load('./train1_model.m')
+        self.model=joblib.load('file/cdt/train1_model.m')
 
     #生成特征
     def make_feature(self,strokes,center,indexs,bounding_box):

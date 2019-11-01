@@ -3,13 +3,13 @@ from sklearn.cluster import KMeans
 from sklearn.externals import joblib
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
-from cdt_util import count_distance
+from file.cdt.cdt_util import count_distance
 
 #初步对笔画进行分类，主要是识别出外圈笔画
 class KmeansModel:
 
     def __init__(self):
-        self.model= joblib.load('./kmeans.model')
+        self.model= joblib.load('file/cdt/kmeans.model')
 
     def make_feature(self,strokes,center,indexs,bounding_box):
         cnt=indexs.shape[0]

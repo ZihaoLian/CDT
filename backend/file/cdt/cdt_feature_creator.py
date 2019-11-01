@@ -8,25 +8,25 @@ from matplotlib.patches import Ellipse
 from sklearn.utils.extmath import softmax
 from sklearn.preprocessing import normalize
 
-import hand
-import digit_classification
-import stroke_classification
-import storke_segmentation
-import area_classification
+import file.cdt.hand
+import file.cdt.digit_classification
+import file.cdt.stroke_classification
+import file.cdt.storke_segmentation
+import file.cdt.area_classification
 
 #from cdt_util import *
-from cdt_util import count_center
-from cdt_util import get_strokes_index
-from cdt_util import get_bounding_box
-from cdt_util import merge_multiple_strokes
-from cdt_util import count_stroke_length
-from cdt_util import get_cloest_distance
-from cdt_util import get_polar_coordinates
-from cdt_util import get_real_child
-from cdt_util import INF
-from cdt_util import count_distance
-from cdt_util import dcmp
-from cdt_util import overlap
+from file.cdt.cdt_util import count_center
+from file.cdt.cdt_util import get_strokes_index
+from file.cdt.cdt_util import get_bounding_box
+from file.cdt.cdt_util import merge_multiple_strokes
+from file.cdt.cdt_util import count_stroke_length
+from file.cdt.cdt_util import get_cloest_distance
+from file.cdt.cdt_util import get_polar_coordinates
+from file.cdt.cdt_util import get_real_child
+from file.cdt.cdt_util import INF
+from file.cdt.cdt_util import count_distance
+from file.cdt.cdt_util import dcmp
+from file.cdt.cdt_util import overlap
 
 
 class CdtModel:
@@ -36,15 +36,15 @@ class CdtModel:
         #钟表每个数字对应的标准角度
         self.digit_angles=[[150],[60,90,120,120,150],[30,90],[0],[330],[300],[270],[240],[210],[180]]
         #初步识别出钟表外圈
-        self.kmeans_model=stroke_classification.KmeansModel()
+        self.kmeans_model=file.cdt.stroke_classification.KmeansModel()
         #将笔画分为区域
-        self.adaboost_model=storke_segmentation.AdaboostModel()
+        self.adaboost_model=file.cdt.storke_segmentation.AdaboostModel()
         #将笔画区域识别出数字区域和指针区域
-        self.svm_model=area_classification.SvmModel()
+        self.svm_model=file.cdt.area_classification.SvmModel()
         #数字识别
-        self.digit_detector=digit_classification.DigitDetector()
+        self.digit_detector=file.cdt.digit_classification.DigitDetector()
         #指针识别
-        self.hand_detector = hand.HandDetect()
+        self.hand_detector = file.cdt.hand.HandDetect()
     def make_cdt_feature(self,command_strokes,copy_strokes,hour,minute,buffer):
         cnt=200
         cdt_feature=np.zeros(408)

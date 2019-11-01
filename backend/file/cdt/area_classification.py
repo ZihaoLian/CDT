@@ -3,17 +3,18 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 from sklearn.externals import joblib
-from cdt_util import count_distance
-from cdt_util import get_bounding_box
-from cdt_util import merge_multiple_strokes
-from cdt_util import get_cloest_distance
-from cdt_util import INF
+from file.cdt.cdt_util import count_distance
+from file.cdt.cdt_util import get_bounding_box
+from file.cdt.cdt_util import merge_multiple_strokes
+from file.cdt.cdt_util import get_cloest_distance
+from file.cdt.cdt_util import INF
+
 
 #识别笔画区域，将区域分出数字区域和指针区域
 class SvmModel:
 
     def __init__(self):
-        self.model= joblib.load('./svm_train_1_model.m')
+        self.model= joblib.load('file/cdt/svm_train_1_model.m')
 
     def make_feature(self,strokes,center,indexs,bounding_box,area_indexs,kmeans_label,edge_strokes):
         features=np.zeros((len(area_indexs),13))
